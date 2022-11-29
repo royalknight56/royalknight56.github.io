@@ -1,0 +1,61 @@
+<!--
+ * @Author: RoyalKnight
+ * @LastEditTime: 2022-11-29 20:44:11
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  class Scheduler{
+    constructor(limit){
+      this.limit = limit;
+      this.queue = [];
+      this.count = 0;
+    }
+    add(task){
+      return new Promise((res,rej)=>{
+        this.queue.push(()=>{
+          task().then(res).catch(rej).finally(
+            ()=>{
+              this.count--;
+              this.next();
+            }
+          )
+        })
+        this.next();
+      })
+    }
+    next(){
+      console.log("this.count",this.count);
+      console.log("this.queue",this.queue)
+
+      if(this.count<this.limit&&this.queue.length){
+        this.queue.shift()();
+        this.count++
+      }
+    }
+  }
+  const timeout = (time)=> new Promise(resolve => {
+    setTimeout(resolve,time)
+  });
+  const scheduler = new Scheduler(2);
+  const addTask = (time,order) => {
+    scheduler.add(() => timeout(time)).then(() => console.log(order))
+  }
+  addTask(1000,'1');
+  addTask(5000,'2');
+  addTask(3000,'3');
+  addTask(4000,'4');
+
+  // 2 3 1 4
+</script>
+</html>
