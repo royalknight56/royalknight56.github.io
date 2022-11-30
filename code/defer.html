@@ -1,0 +1,33 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    
+ </body>
+ <script>
+    // 箭头函数和普通函数的区别
+
+function defer1(f, ms) {
+  return function() {
+    setTimeout(() => f.apply(this, arguments), ms);
+  }
+}
+
+function defer2(f, ms) {
+  return function(...arg){
+    let _this = this;
+    setTimeout(function(){
+      f.apply(_this, arg)
+    }, ms)
+  }
+}
+defer1((arg)=>{console.log(arg)}, 1000)('defer1')
+defer2((arg)=>{console.log(arg)}, 1000)('defer2')
+
+ </script>
+ </html>

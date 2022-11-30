@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    class EventEmitter{
+        constructor(){
+            this.events = {}
+        }
+        on(type, listener){
+            if(!this.events[type]){
+                this.events[type] = []
+            }
+            this.events[type].push(listener)
+        }
+        emit(type, ...args){
+            if(this.events[type]){
+                this.events[type].forEach(listener => {
+                    listener.apply(this, args)
+                });
+            }
+        }
+        off(type, listener){
+            if(this.events[type]){
+                this.events[type] = this.events[type].filter(l => l !== listener)
+            }
+        }
+        once(type, listener){
+            const fn = (...args) => {
+                listener.apply(this, args)
+                this.off(type, fn)
+            }
+            this.on(type, fn)
+        }
+    }
+    let event = new EventEmitter()
+    event.once('broadcast', (data) => {
+        console.log(3, data);
+    });
+    event.once('broadcast', (data) => {
+        console.log(6, data);
+    });
+
+    event.on('broadcast', (data) => {
+        console.log(4, data);
+    });
+
+    function handle(data) {
+        console.log(5, data);
+    }
+    event.on('broadcast', handle);
+
+    event.emit('broadcast', 'hello world');
+    event.off('broadcast',handle);
+    event.emit('broadcast', 'hello world');
+
+
+    
+
+</script>
+
+</html>
