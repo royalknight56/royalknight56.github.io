@@ -1,0 +1,126 @@
+<!--
+ * @Author: RoyalKnight
+ * @LastEditTime: 2022-12-07 19:05:56
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+  </div>
+</body>
+<script>
+  let activeEffect;
+  const connectionStore = new WeakMap()
+  // setInterval(()=>{
+  //   A0.value = A0.value + 1
+  // },2000)
+  function ref(value) {
+    const refObject = {
+      get value() {
+        if(activeEffect){
+          track(refObject, 'value')
+        }
+        return value
+      },
+      set value(newValue) {
+        if(newValue === value) return
+        value = newValue
+        trigger(refObject, 'value')
+      }
+    }
+    return refObject
+  }
+
+  function reactive(obj) {
+    return new Proxy(obj, {
+      get(target, key) {
+        if(activeEffect){
+        track(target, key)
+        }
+        return target[key]
+      },
+      set(target, key, value) {
+        target[key] = value
+        trigger(target, key)
+      }
+    })
+  }
+
+  function track(target, key) {
+    if (activeEffect) {
+      const effects = getSubscribersForProperty(target, key)
+      effects.add(activeEffect)
+    }
+  }
+  function trigger(target, key) {
+    const effects = getSubscribersForProperty(target, key)
+    effects.forEach((effect) => effect())
+  }
+  function getSubscribersForProperty(target, key) {
+    // connectionStore
+    // WeakMap<connectionStore> -> target -> Map<depsMap> -> key -> Set<effect>
+    let depsMap = connectionStore.get(target)
+    if (!depsMap) {
+      depsMap = new Map()
+      connectionStore.set(target, depsMap);
+    }
+    let deps = depsMap.get(key)
+    if (!deps) {
+      deps = new Set()
+      depsMap.set(key, deps)
+    }
+    return deps
+  }
+
+  function watchEffects(update) {
+    const effect = () => {
+      activeEffect = effect
+      update()
+      activeEffect = null
+    }
+    effect()
+  }
+
+  let A0= reactive({
+    k1:0,
+    k2:"v2"
+  });
+  let A1= reactive({
+    k3:1,
+    k4:"v4"
+  });
+  let A2 = ref(1);
+
+  watchEffects(() => {
+    A2.value = A0.k1 + A1.k3;
+  });
+  watchEffects(() => {
+    A2.value = A0.k1 + A1.k3 * 3;
+  });
+
+  watchEffects(() => {
+    div1.innerHTML = A0.k1
+  });
+  watchEffects(() => {
+    div2.innerHTML = A1.k3
+  });
+  watchEffects(() => {
+    div3.innerHTML = A2.value
+  });
+
+  setInterval(()=>{
+    A0.k1 = A0.k1 + 1
+  },2000)
+
+</script>
+</html>

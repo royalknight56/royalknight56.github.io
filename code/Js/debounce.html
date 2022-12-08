@@ -1,0 +1,52 @@
+<!--
+ * @Author: RoyalKnight
+ * @LastEditTime: 2022-12-01 11:18:15
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="/libs/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <textarea id="sc">
+    function debounce(fn,delay){
+      let timer = null;
+      return function(){
+        if(timer){
+          clearTimeout(timer);
+    
+        }
+        let context = this;
+    
+        timer = setTimeout(()=>{
+          fn.apply(context,arguments)
+        },delay)
+      }
+    }
+    document.addEventListener('mousemove',debounce(()=>{
+      console.log('move')
+    },1000));
+    
+    function throttle(fn,delay){
+      let now = new Date();
+      return function(){
+        let _this = this;
+        if(new Date()-now>delay){
+          fn.apply(_this,arguments);
+          now = new Date()
+        }
+      }
+    }
+    
+    document.addEventListener('mousemove',throttle(()=>{
+      console.log('throttle')
+    },1000));
+  </textarea>
+</body>
+<script src="/libs/loadjs.js"></script>
+</html>

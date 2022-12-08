@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="/libs/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <textarea id="sc">
+    console.log('Hello')
+  </textarea>
+</body>
+<script src="/libs/loadjs.js"></script>
+<script>
+  const counter = reactive({ num: 0 });
+  const countLogger = observe(() => console.log(counter.num));
+  counter.num++;
+  function reactive(obj){
+    return 
+  }
+
+// 用来存储原始值和响应式proxy的映射
+const proxyToRaw = new WeakMap()
+// 用来存储响应式proxy和原始值的映射
+const rawToProxy = new WeakMap()
+
+function createReactive(raw){
+  const reactive = new Proxy(raw, baseHandlers)
+
+  // 双向存储原始值和响应式proxy的映射
+  rawToProxy.set(raw, reactive)
+  proxyToRaw.set(reactive, raw)
+
+  // 建立一个映射
+  // 原始值 -> 存储这个原始值的各个key收集到的依赖函数的Map
+  storeObservable(raw)
+
+  // 返回响应式proxy
+  return reactive 
+}
+
+
+const connectionStore = new WeakMap()
+
+function storeObservable(value) {
+  // 存储对象和它内部的key -> reaction的映射
+  connectionStore.set(value, new Map())
+}
+</script>
+</html>
