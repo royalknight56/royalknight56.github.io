@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UDP</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <meta name="description" content="UDP（User Datagram Protocol，用户数据报协议）是一种互联网协议体系中的传输层协议。它是一种无连接的通信协议，用于支持对应用程序传输数"><meta name="keywords" content="TCP,Internet,Data,Transmission,Protocol,Stream,Application,Layer,Socket,Programming,Network,Transport,Address,Port,reliability,Flowcontrol,Errorcorrection,Multicast,broadcast.">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./TCP.html">
+    TCP
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./Internet.html">
+    Internet
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./Data.html">
+    Data
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./Transmission.html">
+    Transmission
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./Protocol.html">
+    Protocol
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./Stream.html">
+    Stream
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./Application.html">
+    Application
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./Layer.html">
+    Layer
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./Socket.html">
+    Socket
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./Programming.html">
+    Programming
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./Network.html">
+    Network
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./Transport.html">
+    Transport
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./Address.html">
+    Address
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./Port.html">
+    Port
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./reliability.html">
+    reliability
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./Flowcontrol.html">
+    Flowcontrol
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./Errorcorrection.html">
+    Errorcorrection
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./Multicast.html">
+    Multicast
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./broadcast..html">
+    broadcast.
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>UDP</h1>
+                    UDP（User Datagram Protocol，用户数据报协议）是一种互联网协议体系中的传输层协议。它是一种无连接的通信协议，用于支持对应用程序传输数据进行端到端的传递。UDP在不保证数据包传递的情况下进行传输，因此具有较低的延迟和开销，但可能会增加数据包丢失的风险。UDP通常使用在需要快速传输和对实时性要求较高的场合，例如视频流、在线游戏等。
+
+UDP协议由IETF的RFC 768定义。在TCP/IP协议族中，UDP与TCP共享同一个协议号（13）。
+
+**UDP特点**：
+
+1. **无连接**：UDP协议不需要建立连接就可以直接发送数据包。这使得UDP通信更快，因为它避免了与TCP连接建立和维护所需的额外开销。
+2. **不可靠**：UDP协议不提供任何形式的可靠性保证。如果数据包在网络中丢失或损坏，UDP不会尝试重传丢失的数据包。因此，UDP协议通常用于那些对实时性要求较高且可以容忍一定数据丢失的应用程序。
+3. **基于数据报**：UDP协议以数据报为单位进行数据传输。数据报是UDP上传输的基本单位，包含了要传输的数据以及相关的控制信息，如源端口、目的端口、序列号和校验和等。
+4. **头部开销小**：相比于TCP，UDP协议的头部开销较小，只有8个字节，这有助于提高数据传输效率。
+5. **支持多个进程**：UDP协议支持多个进程在一个主机上同时使用，这一点与TCP不同，TCP在同一时间只能支持一个进程进行通信。
+
+尽管UDP协议具有上述优点，但它也存在一些缺点。例如，由于UDP不提供可靠性保证，因此可能会出现数据包丢失、延迟或乱序的问题。这些问题对于那些对实时性要求较高的应用来说是不可接受的。因此，在使用UDP协议时，需要谨慎考虑应用程序的需求，并采取相应的措施来处理可能出现的这些问题。
+
+总的来说，UDP协议是一种高效、轻量级的传输层协议，适用于那些需要快速传输和对实时性要求较高的场合。然而，由于其不可靠性和缺乏重传机制的特点，使用UDP协议时需要谨慎考虑应用程序的需求并采取相应的措施来处理可能出现的这个问题。
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

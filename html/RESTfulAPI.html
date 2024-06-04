@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESTfulAPI</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <meta name="description" content="RESTful API 是一种设计网络应用程序的架构风格和开发方式。它是一种基于超文本传输协议（HTTP）的应用程序接口，以资源为中心，使用HTTP方法如G"><meta name="keywords" content="RESTfulAPI,API,REST,WebAPI,JSON,HTTP,Request,Response,Resource,Data,Filtering,Sorting,Associative,Caching,Versioning,Security,Authentication,Authorization,Connection,RateLimiting">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./RESTfulAPI.html">
+    RESTfulAPI
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./API.html">
+    API
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./REST.html">
+    REST
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./WebAPI.html">
+    WebAPI
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./JSON.html">
+    JSON
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./HTTP.html">
+    HTTP
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./Request.html">
+    Request
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./Response.html">
+    Response
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./Resource.html">
+    Resource
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./Data.html">
+    Data
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./Filtering.html">
+    Filtering
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./Sorting.html">
+    Sorting
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./Associative.html">
+    Associative
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./Caching.html">
+    Caching
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./Versioning.html">
+    Versioning
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./Security.html">
+    Security
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./Authentication.html">
+    Authentication
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./Authorization.html">
+    Authorization
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./Connection.html">
+    Connection
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./RateLimiting.html">
+    RateLimiting
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>RESTfulAPI</h1>
+                    RESTful API 是一种设计网络应用程序的架构风格和开发方式。它是一种基于超文本传输协议（HTTP）的应用程序接口，以资源为中心，使用HTTP方法如GET、POST、PUT和DELETE进行操作。RESTful API 具有以下特点：
+
+1. 无状态：RESTful API 的每个请求都包含了处理该请求所需的所有信息。服务器不会存储客户端的上下文信息，这样就实现了无状态性。
+
+2. 客户端-服务器架构：RESTful API 将客户端和服务器的功能分离，使得服务器可以独立地发展，同时可以支持多个客户端。
+
+3. 资源导向：RESTful API 将每个资源都视为唯一的URL，通过对URL的操作来实现对应资源的增、删、改、查等操作。
+
+4. 标准化的方法：RESTful API 使用标准化的HTTP方法来操作资源，如GET用于查询资源，POST用于创建资源，PUT用于更新资源， DELETE用于删除资源。
+
+5. 可缓存：RESTful API可以在客户端或者服务器端设置缓存策略，提高响应速度和降低服务器压力。
+
+6. 一致性接口：RESTful API 使用标准的HTTP状态码和消息头来表示请求的结果，这样使得客户端可以更容易地解析服务器返回的信息。
+
+应用场景：
+
+RESTful API 在许多在线系统中都有广泛的应用，例如社交网络、电子商务、在线票务系统、博客等。下面列举了一些典型的 RESTful API 应用场景：
+
+1. 社交网络：用户可以通过RESTful API分享动态、查看好友动态、发布状态、评论等。
+
+2. 电子商务：RESTful API 可以用于实现商品检索、购物车管理、订单处理等功能。
+
+3. 在线票务系统：RESTful API 可以用于管理票务资源，包括购票、退票、查看订单等。
+
+4. 博客系统：RESTful API 可以用于实现文章的增删改查、评论、分类管理等操作。
+
+总的来说，RESTful API 是一种简单且实用的网络应用程序架构风格，它的明确和无状态特性使得它在现代网络应用开发中非常受欢迎。通过遵循RESTful API的原则和方法，开发人员可以更容易地构建和维护大型、复杂的网络应用程序。
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>面向对象</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <meta name="description" content="面向对象（Object-Oriented Programming，简称OOP）是一种计算机编程架构。它使用“对象”来设计软件。你可以将它想象成现实世界中的一"><meta name="keywords" content="面向对象,对象导向,封装,类,继承,多态,抽象,技术,面向过程,软件开发">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./面向对象.html">
+    面向对象
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./对象导向.html">
+    对象导向
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./封装.html">
+    封装
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./类.html">
+    类
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./继承.html">
+    继承
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./多态.html">
+    多态
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./抽象.html">
+    抽象
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./技术.html">
+    技术
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./面向过程.html">
+    面向过程
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./软件开发.html">
+    软件开发
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>面向对象</h1>
+                    面向对象（Object-Oriented Programming，简称OOP）是一种计算机编程架构。它使用“对象”来设计软件。你可以将它想象成现实世界中的一个个实体，每个对象都可以包含数据和能够进行数据操作的代码。在现实生活中，对象可以表示一个人、一个地方、一件事或者任何可以描述的东西。在编程中，对象也能够接收消息、处理数据、发送消息给其他对象，并且可以访问它们的共享资源。
+
+面向对象的核心概念包括类和对象、封装、继承和多态。
+
+1. 类和对象：类是一种蓝图或模板，它定义了创建对象的具体细节，包括对象的属性和方法。而对象则是根据类创建的实体。
+
+2. 封装：封装是指将对象的状态（属性）和行为（方法）打包在一起，并对对象的状态进行隐藏。这样，对象的状态只能通过已定义的接口被访问和修改，而不能直接从外部访问。这样可以保护对象的内部状态不被外部随意更改，从而使得对象的状态更易于控制和维护。
+
+3. 继承：继承是一种创建新类的方式，新创建的类是已存在的类的扩展或特化。新类继承了已存在的类的属性和方法，同时也可以添加新的属性和方法或者重写已存在的方法。
+
+4. 多态：多态是指允许你将子类的对象当作父类的对象使用，具体的操作由对象的实际类型决定。这使得你可以用统一的方式处理不同的对象，而不需要考虑它们具体的类型。
+
+面向对象的优势在于它能够提高代码的可重用性、可维护性和扩展性。通过模块化和抽象，面向对象能够使得程序更容易理解和修改。此外，面向对象还能够更好地模拟现实世界的模型，从而使得编程更加贴近现实世界的运作方式。
+
+在面向对象的编程中，通常会使用一种名为“封装”的技术来确保对象内部状态的保密性。这种技术利用了现实世界中“私有”的概念，即某些属性或方法是私有的，不应该被外部直接访问。在面向对象编程中，类通常会将成员变量定义为私有的，而将方法定义为公有的。这样，外部对象只能通过类的公有方法来访问对象的数据，而不能直接访问对象的内部数据。
+
+另外，为了实现多态，面向对象编程语言通常也会提供一些通用的操作符和方法，这些操作符和方法可以用于执行对象之间的通信和操作。例如，在Java编程语言中，可以使用“==”运算符来比较两个对象是否相等，或者使用“+”运算符来合并两个对象等。这些通用操作符和方法的使用可以帮助开发者更加灵活地处理不同类型的对象，从而使得程序更加具有可扩展性和可维护性。
+
+总的来说，面向对象编程是一种强大而灵活的编程范式，它能够使得软件开发更加高效、可靠和易于维护。通过封装、继承和多态等核心概念，面向对象编程能够提供了一种自然的方式来表达现实世界中的实体和它们之间的关系。
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

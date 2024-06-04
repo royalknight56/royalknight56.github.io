@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPSEC</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <meta name="description" content="IPSEC（Internet Protocol Security）是一种用于在互联网上保护数据完整性和隐私的传输层安全协议。它是在原始IP数据包上封装了一层"><meta name="keywords" content="IPSEC,网络安全,安全协议,隧道,身份验证,加密,授权,保密性,可扩展性.">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./IPSEC.html">
+    IPSEC
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./网络安全.html">
+    网络安全
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./安全协议.html">
+    安全协议
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./隧道.html">
+    隧道
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./身份验证.html">
+    身份验证
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./加密.html">
+    加密
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./授权.html">
+    授权
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./保密性.html">
+    保密性
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./可扩展性..html">
+    可扩展性.
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>IPSEC</h1>
+                    IPSEC（Internet Protocol Security）是一种用于在互联网上保护数据完整性和隐私的传输层安全协议。它是在原始IP数据包上封装了一层新的头和尾，也就是我们通常所说的IPsec头部，来保护整个原始IP数据包。这个头部包含了控制信息，比如序列号、锁定机制和警报机制等。
+
+IPsec的设计目的是为了满足两个主要需求：一是确保在传输过程中的数据包不被窃听和篡改；二是保护数据的隐私性，避免数据被未经授权的第三方访问。通过在IP包中插入一个额外的头部，IPsec可以提供对这些数据包的认证、加密和完整性保护。
+
+在IPsec中，有两个主要的组件：一种是认证头（Authentication Header, AH），另一种是密钥交换协议（Key Exchange Protocol, KEX）。AH负责提供数据的认证和完整性，而KEX则负责在不同的实体之间建立安全的密钥交换通道。
+
+IPsec可以工作在两种模式：传输模式和隧道模式。在传输模式中，IPsec保护的是原始IP数据包的内部内容，而在隧道模式中，IPsec则封装整个原始IP数据包，使得数据在经过隧道后仍然能保持完整性和隐私性。
+
+IPsec的应用非常广泛，它可以被集成到操作系统、路由器、防火墙等多种网络设备中，以确保网络安全。随着网络攻击的不断变化，IPsec也在不断地更新和完善，以应对新的安全威胁。
+
+总的来说，IPsec是一种非常重要的网络安全协议，它可以有效地保护我们在互联网上的数据和隐私，防止数据被窃听、篡改和访问。然而，由于IPsec的复杂性，配置和维护起来可能会有一定的难度。因此，在实际应用中，我们需要根据具体情况选择合适的IPsec配置和管理方法，以确保网络的安全和稳定。
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

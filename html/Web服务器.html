@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web服务器</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <meta name="description" content="# Web 服务器
+
+Web服务器是用于处理HTTP请求并提供相应页面的计算机程序。当用户在浏览器中输入网址时，Web服务器就会负责将网页发送到用户的浏览器"><meta name="keywords" content="Web服务器,HTTP,HTTPS,网站,负载均衡,缓存,静态内容,动态内容,数据库,PHP,Python,Ruby,Node.js,Nginx,Apache">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./Web服务器.html">
+    Web服务器
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./HTTP.html">
+    HTTP
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./HTTPS.html">
+    HTTPS
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./网站.html">
+    网站
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./负载均衡.html">
+    负载均衡
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./缓存.html">
+    缓存
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./静态内容.html">
+    静态内容
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./动态内容.html">
+    动态内容
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./数据库.html">
+    数据库
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./PHP.html">
+    PHP
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./Python.html">
+    Python
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./Ruby.html">
+    Ruby
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./Node.js.html">
+    Node.js
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./Nginx.html">
+    Nginx
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./Apache.html">
+    Apache
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>Web服务器</h1>
+                    # Web 服务器
+
+Web服务器是用于处理HTTP请求并提供相应页面的计算机程序。当用户在浏览器中输入网址时，Web服务器就会负责将网页发送到用户的浏览器。以下是关于Web服务器的一些详细信息。
+
+## 什么是Web服务器？
+
+Web服务器是一种在互联网上提供文档、图像、视频和其他内容的服务器。它能够响应来自网络接口（如HTTP）的请求，并提供一个静态或动态的内容。普通的Web服务器只提供静态内容，而更高级的服务器可以提供数据库查询、事务处理和其他高级功能。
+
+## 主要功能
+
+* **处理HTTP请求**：Web服务器的首要任务就是处理客户端发出的HTTP请求。这些请求可能是来源于简单的网页浏览，也可能是复杂的XMLRPC调用或者其他HTTP资源请求。
+* **返回HTML页面**：当从数据库或其他源头获取数据后，Web服务器会编译这些数据为HTML，并发送给客户端。
+* **动态内容**：现代Web应用通常需要动态生成内容，这一般通过使用诸如PHP、ASP.NET、Ruby on Rails等服务器端语言来实现。服务器端脚本会在服务器端执行，并将生成的HTML发送给客户端。
+* **文件存储**：除了提供首页或栈式内容的页面外，Web服务器还常常需要存储和提供其他文件，例如图像、视频、PDF文件等。
+
+## 组件
+
+* **处理器**：处理所有来自客户端的请求并生成相应的回应。
+* **存储器**：用于存储CSS、JavaScript文件、图片、视频和其他媒体文件。
+* **通信模块**：负责与客户端，以及内部子系统（如数据库服务器、负载均衡器等）进行通信。
+
+## 工作原理
+
+1. 当用户浏览器请求一个网页时，浏览器首先向目标服务器发送HTTP请求。
+2. 服务器接收请求并解析HTTP令牌，以确定请求的类型和他们想要获取的数据。
+3. 服务器根据请求类型调用相应的处理器或脚本，以处理并获取所需的数据。
+4. 处理器从数据库或其他源头获取数据，然后连同所请求的页面HTML一同发送回服务器。
+5. 服务器将所得到的HTML页面发送回浏览器。
+6. 浏览器接收到HTML页面后，解释并显示 页面内容。
+
+## 应用范围
+
+* **官方网站**：为用户提供公司、组织或个人网站的托管服务。
+* **企业网站**：提供产品发布、客户服务和内部员工信息的平台。
+* **电子商务**：在线销售产品或服务的网站。
+* **博客**：分享信息和观点的平台。
+* **基于CMS的系统**：内容管理系统，如WordPress, Joomla, Drupal等，利用Web服务器提供文章、栏目和其他自定义内容。
+
+随着技术的不断进步和应用的日益广泛，Web服务器的性能和稳定性也在不断提高，以适应更高的访问量和数据流量。
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>哈希函数</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <meta name="description" content="哈希函数是一种在数字信息存储和检索系统中广泛使用的函数。它通过将输入数据（比如文本、图像或者音频文件）通过特定的算法转换成一个固定长度的字符串，这个过程称为"><meta name="keywords" content="哈希函数,哈希表,字符串处理,数据结构,散列算法,校验和,压缩,映射,匹配,速度,安全性">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./哈希函数.html">
+    哈希函数
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./哈希表.html">
+    哈希表
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./字符串处理.html">
+    字符串处理
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./数据结构.html">
+    数据结构
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./散列算法.html">
+    散列算法
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./校验和.html">
+    校验和
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./压缩.html">
+    压缩
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./映射.html">
+    映射
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./匹配.html">
+    匹配
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./速度.html">
+    速度
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./安全性.html">
+    安全性
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>哈希函数</h1>
+                    哈希函数是一种在数字信息存储和检索系统中广泛使用的函数。它通过将输入数据（比如文本、图像或者音频文件）通过特定的算法转换成一个固定长度的字符串，这个过程称为哈希运算。哈希函数的特性包括：
+
+1. **唯一性**：对于任意给定的输入数据，哈希函数产生的哈希值都是唯一的，这样可以确保在不同时间或不同情况下输入数据的安全性。
+
+2. **不可预测性**：哈希运算是数学运算，基于算法执行，因此在不同的时间段内，对同一数据的哈希值是不变的，这使得它成为一个“不可预测”的转换过程。
+
+3. **快速性能**：哈希函数可以在很短的时间内完成，这使得它在高速数据流处理、数据库索引和文件一致性检测等方面非常有用。
+
+哈希函数的应用范围非常广泛，以下是一些常见的应用场景：
+
+1. **密码存储**：为了安全地存储用户的密码，系统会使用哈希函数将原始密码转换成一个哈希值，并将这个哈希值存储起来。当用户登录时，系统会对输入的密码进行哈希运算，然后将得到的哈希值与存储的哈希值比对，如果两者相同，则确认用户身份。
+
+2. **数据完整性检查**：哈希函数可以用于验证数据的完整性。例如，在物流过程中，可以通过比较运输物品的哈希值与发货时的哈希值来确认物品是否在途中被篡改。
+
+3. **查找表**：在实现查找表时，哈希函数可以用来直接计算出数据所在的位置，这极大提升了查找效率。
+
+然而，哈希函数也有其局限性。例如，当两个不同的输入数据经过相同的哈希运算后得到相同的哈希值时，就可能导致“哈希碰撞”或“冲突”。为了避免这种情况，通常需要采用不同的哈希函数或将多个输入数据与同一个哈希值关联起来。
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

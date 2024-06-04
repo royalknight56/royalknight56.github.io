@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>代理服务器</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <meta name="description" content="代理服务器（Proxy server）是一种在计算机网络中用于转发请求和响应的服务器。它作为客户端和互联网之间的中介，可以帮助用户访问本地无法直接访问的网络"><meta name="keywords" content="代理服务器,负载均衡,VPN,局域网,内网穿透,HTTP代理,HTTPS代理,端口转发,IP地址映射,远程访问">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./代理服务器.html">
+    代理服务器
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./负载均衡.html">
+    负载均衡
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./VPN.html">
+    VPN
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./局域网.html">
+    局域网
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./内网穿透.html">
+    内网穿透
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./HTTP代理.html">
+    HTTP代理
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./HTTPS代理.html">
+    HTTPS代理
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./端口转发.html">
+    端口转发
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./IP地址映射.html">
+    IP地址映射
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./远程访问.html">
+    远程访问
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>代理服务器</h1>
+                    代理服务器（Proxy server）是一种在计算机网络中用于转发请求和响应的服务器。它作为客户端和互联网之间的中介，可以帮助用户访问本地无法直接访问的网络资源。代理服务器可以用于提高网络访问速度、保护用户隐私和实现特定的网络策略。
+
+### 代理服务器的工作原理
+
+1. **客户端请求**：当用户在浏览器或其他客户端中请求一个网页时，请求首先发送到代理服务器。
+
+2. **代理服务器接替**：代理服务器接收请求，并根据其配置决定如何处理该请求。
+
+3. **网络请求**：代理服务器将请求转发到目标服务器（可以是互联网上的任何服务器）。
+
+4. **目标服务器响应**：目标服务器处理请求并返回响应。
+
+5. **代理服务器转发**：代理服务器将目标服务器的响应发送回用户的客户端。
+
+6. **客户端接收响应**：用户的客户端接收到响应，并继续处理页面的显示。
+
+### 代理服务器的功能
+
+- **网络加速**：通过缓存常用网站的响应，代理服务器可以减少数据传输时间，提高连接速度。
+
+- **隐私保护**：代理服务器可以隐藏用户的真实IP地址，增加网络浏览的安全性。
+
+- **内容过滤**：代理服务器可以根据用户的偏好或管理员的设置，过滤掉不需要的内容。
+
+- **访问限制**：代理服务器可以用来限制用户访问某些网站或内容，特别是在企业环境中。
+
+- **负载均衡**：在高并发的网络场景中，代理服务器可以分配流量，提高服务器的整体性能。
+
+### 代理服务器的类型
+
+根据代理服务器在网络中的位置和功能，可以分为以下几种类型：
+
+1. **正向代理**：客户端无法直接访问目标服务器，需要通过代理服务器来转发请求。常见于个人网络浏览器中。
+
+2. **反向代理**：目标服务器不知道客户端的真实IP地址，所有请求首先发送到代理服务器。常见于Web应用服务器和云服务提供商。
+
+3. **VPN代理**：通过虚拟专用网络（VPN）技术建立的安全隧道，可以实现代理服务器的功能，同时提供隐私保护和匿名浏览。
+
+4. **SSH代理**：通过SSH隧道建立的代理连接，用于远程访问和控制远程服务器。
+
+### 选择和使用代理服务器的考虑因素
+
+- **安全性**：确保代理服务器的配置安全，避免暴露敏感信息。
+
+- **效率**：考虑代理服务器的缓存策略和性能，以优化数据传输。
+
+- **可用性**：选择稳定的代理服务器和服务提供商，确保网络的可靠性。
+
+- **透明度**：对于正向代理，用户可能希望保持浏览行为的透明性，而对于反向代理，用户通常不会意识到代理的存在。
+
+- **合规性**：确保代理服务器的使用符合当地的法律法规。
+
+总之，代理服务器是现代网络安全和网络优化中不可或缺的工具。正确选择和使用代理服务器可以带来诸多好处，但同时也需要注意安全和隐私保护的问题。
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

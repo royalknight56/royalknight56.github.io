@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tcp</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <meta name="description" content="TCP（Transmission Control Protocol，传输控制协议）是一种面向连接的、可靠的、基于字节流的传输层通信协议，由IETF的RFC "><meta name="keywords" content="tcp,internet,protocol,download,upload,connection,flowcontrol,acknowledgement,windowsize,timeout,retransmission,transmissioncontrolprotocol,stack,routing.">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./tcp.html">
+    tcp
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./internet.html">
+    internet
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./protocol.html">
+    protocol
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./download.html">
+    download
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./upload.html">
+    upload
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./connection.html">
+    connection
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./flowcontrol.html">
+    flowcontrol
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./acknowledgement.html">
+    acknowledgement
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./windowsize.html">
+    windowsize
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./timeout.html">
+    timeout
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./retransmission.html">
+    retransmission
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./transmissioncontrolprotocol.html">
+    transmissioncontrolprotocol
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./stack.html">
+    stack
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./routing..html">
+    routing.
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>tcp</h1>
+                    TCP（Transmission Control Protocol，传输控制协议）是一种面向连接的、可靠的、基于字节流的传输层通信协议，由IETF的RFC 793定义。它提供了一种可靠、快速且可靠的通信服务，广泛应用于各种网络应用中，如网页浏览、电子邮件、文件传输等。
+
+TCP协议的主要特点包括：
+
+1. **面向连接**：在数据传输之前，TCP需要通过“三次握手”建立连接，确保通信双方的准备好进行数据交换。这种面向连接的特性有助于减少数据传输中的错误和延迟。
+2. **可靠传输**：TCP通过确认和重传机制来确保数据的可靠传输。当发送方发送数据后，接收方会返还一个确认消息，表示数据已被成功接收。如果接收方未收到数据或出现错误，它会发送重传请求，发送方会重新发送数据，直到接收到确认消息为止。
+3. **流量控制和拥塞控制**：TCP具有流量控制和拥塞控制两种机制。流量控制是通过滑窗协议来实现的，能够避免过多的数据涌入网络，造成网络拥塞。拥塞控制则是通过接收方的反馈来估计网络的拥塞程度，并相应地调整发送速度，以保持网络的有效传输。
+
+TCP协议的应用场景非常广泛，包括但不限于：
+
+1. **网页浏览**：当我们在浏览器中访问一个网站时，浏览器与服务器之间就需要通过TCP协议进行通信。TCP能够确保网页的及时加载和稳定传输，提高用户体验。
+2. **电子邮件**：电子邮件客户端与邮件服务器之间也会使用TCP协议进行数据的传输。通过TCP连接，我们可以实时接收和发送电子邮件，保证邮件的及时送达和准确无误。
+3. **文件传输**：在网络中，我们经常需要传输大量的文件，如文档、图片、视频等。TCP协议能够提供高效、可靠的文件传输服务，使得文件的共享和传输变得更加便捷。
+
+总之，TCP协议作为一种关键的传输层协议，为我们提供了可靠、高效的通信服务，推动了计算机网络的发展和应用。
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

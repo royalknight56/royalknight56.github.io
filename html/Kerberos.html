@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kerberos</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <meta name="description" content="Kerberos是一种网络认证协议，也被称为UNIX网络授权协议。它的主要设计目标是提供一个对计算机网络和基于Unix的操作系统（如Linux和BSD）进行"><meta name="keywords" content="Kerberos,认证,服务器,客户端,凭据,密钥,访问控制,安全性,集成,身份验证,加密,解密">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./Kerberos.html">
+    Kerberos
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./认证.html">
+    认证
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./服务器.html">
+    服务器
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./客户端.html">
+    客户端
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./凭据.html">
+    凭据
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./密钥.html">
+    密钥
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./访问控制.html">
+    访问控制
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./安全性.html">
+    安全性
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./集成.html">
+    集成
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./身份验证.html">
+    身份验证
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./加密.html">
+    加密
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./解密.html">
+    解密
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>Kerberos</h1>
+                    Kerberos是一种网络认证协议，也被称为UNIX网络授权协议。它的主要设计目标是提供一个对计算机网络和基于Unix的操作系统（如Linux和BSD）进行安全认证的框架。Kerberos协议由麻省理工学院（MIT）的Ivan E. E. Peter开发，并于1980年代初期首次发表。
+
+Kerberos的核心概念是授权，它允许节点在非信任的网络上相互确认身份并按照权限执行操作。该协议通过使用称为“票据”的加密令牌来实现这一目标，这些令牌在用户（或服务）成功登录后生成，并在一段时间内有效，以允许用户访问多个相关的但独立的服务器。
+
+Kerberos的组件包括：
+
+1. **Kerberos认证服务器（KDC）**：负责验证用户的登录请求并向用户发放票据。KDC中包含用户的种子（seed），这是一个随机生成的字符串，用于生成票据。
+2. **客户机-服务器应用程序**：用户与KDC进行交互以登录。一旦登录，用户就可以访问其他服务器，而无需再次进行登录。
+3. **票据授权服务器（TGS）**：KDC的一部分，负责向用户发放和管理票据。TGS知道所有有效的票据，并可以基于这些票据向用户授予服务访问权限。
+4. **服务票据**：票据授权服务器签发的加密令牌，提供了对特定服务的访问权限。当用户登录时，KDC会生成一个票据并在一段时间内有效。用户可以使用此票据来访问其他服务，而无需再次进行登录。
+5. **Kerberos票据缓存**：用户在其本地机器上存储票据的区域。这允许用户在不重新连接到网络的情况下访问其他服务器，只要他们的票据仍然有效。
+
+除了上述组件，还有其他几种类型的票据，如会话密钥票据和Kerberos服务票据，每种都有其特定的用途。会话密钥票据用于在单个会话期间保护通信，而Kerberos服务票据则用于授予对整个Kerberos域内服务的访问权限。
+
+随着时间的推移，Kerberos已经发展出新的版本和改进，例如Kerberos v5和Kerberos Secure Authentication Protocol (KAAP)，后者使用公钥基础设施（PKI）来增强安全性并支持数字证书的使用。
+
+总的来说，Kerberos是一个强大且广泛使用的安全协议，它为许多基于Unix的操作系统提供了强大的认证和授权功能。尽管有了更现代的身份验证协议，如OAuth 2.0、OpenID Connect和SAML，但Kerberos仍然是许多企业和组织网络安全策略的重要组成部分。
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

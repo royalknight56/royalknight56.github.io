@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>地址栏</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <meta name="description" content="地址栏，也被称为地址栏或网址栏，是浏览器中一个用于输入网址或地址的文本框。它允许用户在浏览器的地址窗口中输入和编辑当前网页的地址。地址栏中的输入内容会被发送"><meta name="keywords" content="地址栏,URL,网址,主机名,端口,查询参数,方言,路由,传参,组件,标签,面包屑,超链接,前进,返回">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./地址栏.html">
+    地址栏
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./URL.html">
+    URL
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./网址.html">
+    网址
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./主机名.html">
+    主机名
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./端口.html">
+    端口
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./查询参数.html">
+    查询参数
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./方言.html">
+    方言
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./路由.html">
+    路由
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./传参.html">
+    传参
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./组件.html">
+    组件
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./标签.html">
+    标签
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./面包屑.html">
+    面包屑
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./超链接.html">
+    超链接
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./前进.html">
+    前进
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./返回.html">
+    返回
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>地址栏</h1>
+                    地址栏，也被称为地址栏或网址栏，是浏览器中一个用于输入网址或地址的文本框。它允许用户在浏览器的地址窗口中输入和编辑当前网页的地址。地址栏中的输入内容会被发送到服务器，服务器会根据这些信息返回相应的网页内容。
+
+在HTML文档中，地址栏的部分通常由`<a>`标签表示，该标签用于创建超链接。例如：
+
+```html
+<a href="https://www.example.com">访问example.com</a>
+```
+
+在此示例中，`<a>`标签的`href`属性定义了链接的目标地址，也就是地址栏中应输入的地址。当用户点击这个链接时，浏览器将会导航到地址栏中输入的地址所指向的网页。
+
+除了输入网址外，地址栏还可以用于接受用户的搜索查询。许多网站都会在地址栏中显示一个搜索建议或自动完成框，以便用户在输入搜索词时能够快速找到并访问相关的网页。例如：
+
+```
+https://www.google.com/search?q=搜索引擎+查询
+```
+
+在这个例子中，地址栏中的查询字符串是`q=搜索引擎+查询`，它将被发送到Google的服务器，以搜索与“搜索引擎 查询”相关的网页。
+
+地址栏是浏览器界面中的一个重要组成部分，它使得用户能够方便地浏览和导航。通过地址栏，用户可以轻松地访问他们之前访问过的网页、搜索新的网页，或者访问不同的网站。同时，地址栏也是网站管理员监控网站流量和用户行为的一个重要工具，因为它可以显示当前访问者的URL，以及他们在网站上进行的操作。
+
+随着网络技术的发展，地址栏的功能也在不断地扩展和变化。例如，一些现代浏览器支持在地址栏中输入JavaScript代码，以实现更加动态和交互式的网页体验。此外，随着移动互联网的兴起，地址栏也逐渐演变成为了一个集成了地址查询、搜索、导航等多种功能的界面元素。
+
+总之，地址栏是浏览器中一个不可或缺的组成部分，它为用户提供了便捷的网址输入和浏览方式的同时，也为网站管理员提供了监控和分析用户行为的重要渠道。随着技术的不断进步和创新，我们有理由相信，地址栏的未来将变得更加智能和高效。
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

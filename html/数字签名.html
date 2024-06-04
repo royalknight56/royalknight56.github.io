@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数字签名</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <meta name="description" content="数字签名是一种通过使用密码学技术来验证数字信息完整性和来源的方式。它是一种确保消息的真实性、防止篡改和伪造的方法。数字签名在加密传输中的数据以及诸如智能合约"><meta name="keywords" content="数字签名,安全性,编程,确认,不可否认性,信息完整性,电子签名,数字认证,公钥,私钥,证书颁发机构,身份验证,认证机构,加密,安全协议,哈希函数.">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./数字签名.html">
+    数字签名
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./安全性.html">
+    安全性
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./编程.html">
+    编程
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./确认.html">
+    确认
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./不可否认性.html">
+    不可否认性
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./信息完整性.html">
+    信息完整性
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./电子签名.html">
+    电子签名
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./数字认证.html">
+    数字认证
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./公钥.html">
+    公钥
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./私钥.html">
+    私钥
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./证书颁发机构.html">
+    证书颁发机构
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./身份验证.html">
+    身份验证
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./认证机构.html">
+    认证机构
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./加密.html">
+    加密
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./安全协议.html">
+    安全协议
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./哈希函数..html">
+    哈希函数.
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>数字签名</h1>
+                    数字签名是一种通过使用密码学技术来验证数字信息完整性和来源的方式。它是一种确保消息的真实性、防止篡改和伪造的方法。数字签名在加密传输中的数据以及诸如智能合约等分布式账本系统中得到广泛应用。
+
+### 什么是数字签名？
+
+数字签名是用发送方的私钥对信息本身或信息摘要进行加密后得到的，它与用发送方公钥加密的信息是逻辑上相关的。接收方需要用发送方的公钥解密数字签名，以证明消息的真实性。通过数字签名能确认消息的完整性与发送者身份，并可以防止伪造。
+
+### 数字签名的原理
+
+**1. 消息摘要**
+
+首先，通过对原始消息进行哈希处理，生成消息摘要。哈希处理是一种单项函数，输入经过处理后的消息将产生一个固定长度的唯一哈希值，即使输入消息有所变化，哈希值也会发生很大变化。
+
+**2. 私钥加密**
+
+然后，使用发送方的私钥将生成的数字签名进行加密。私钥是唯一的，只有发送方才拥有。通过私钥加密后的数字签名只有接收方能够解密。
+
+**3. 公钥解密及验证**
+
+最后，接收方使用发送方的公钥将加密的数字签名解密，还原成原始的数字签名。然后，将解密后的数字签名与原始消息摘要进行比较。如果两者一致，则说明消息的完整性未被篡改，并且确实是由持有相应私钥的发送方所签名的。
+
+### 数字签名的优点
+
+**1. 完整性保证：** 数字签名确保了数据的完整性，接收方无法接收到一个被篡改或损坏的数据。
+
+**2. 身份验证：** 接收方可以通过检查数字签名来确认发送方的身份。
+
+**3. 不可抵赖性：** 发送方不能抵赖他已签名的消息，因为私钥是唯一的，并且只有他才拥有。
+
+**4. 安全性：** 数字签名使消息的发送和接收在网络上以加密方式进行，从而防止了中间人攻击。
+
+### 数字签名的应用场景
+
+数字签名的应用广泛，既可用于保护电子邮件、合同和其他文档，也可用于保护在线交易和通信。例如：
+
+**1. 安全电子邮件：** 确保邮件不被篡改，发件人无法抵赖发送过邮件。
+
+**2. 合同和协议：** 在签订合同时，可以对合同上的签名进行加密，只有合同中所涉及的各方才能解读。
+
+**3. 购物和拍卖：** 数字签名可以确保卖家发出的货物确实已被购买，也可以确保支付成功。
+
+**4. 跨境通信：** 在跨国交易中，数字签名能够保证信息的完整性，防止欺诈行为。
+
+综上所述，数字签名是确保信息安全的重要技术之一，在金融、商业和个人场景中都有广泛的应用。
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

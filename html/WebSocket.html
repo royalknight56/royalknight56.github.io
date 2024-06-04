@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <meta name="description" content="WebSocket是一种网络通信协议，它允许在客户端和服务器之间建立双向、实时、双向连接的通信通道。WebSocket协议于2008年由IETF（国际互联网"><meta name="keywords" content="WebSocket,实时通信,Websocket协议,数据传输,轮询,非常慢,节流,服务器推送,端到端,双向通信,混合,库,网络编程,客户端-服务器,静态网页,实时游戏,API,高性能,IPv4,可扩展性.">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./WebSocket.html">
+    WebSocket
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./实时通信.html">
+    实时通信
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./Websocket协议.html">
+    Websocket协议
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./数据传输.html">
+    数据传输
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./轮询.html">
+    轮询
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./非常慢.html">
+    非常慢
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./节流.html">
+    节流
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./服务器推送.html">
+    服务器推送
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./端到端.html">
+    端到端
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./双向通信.html">
+    双向通信
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./混合.html">
+    混合
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./库.html">
+    库
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./网络编程.html">
+    网络编程
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./客户端-服务器.html">
+    客户端-服务器
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./静态网页.html">
+    静态网页
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./实时游戏.html">
+    实时游戏
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./API.html">
+    API
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./高性能.html">
+    高性能
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./IPv4.html">
+    IPv4
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./可扩展性..html">
+    可扩展性.
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>WebSocket</h1>
+                    WebSocket是一种网络通信协议，它允许在客户端和服务器之间建立双向、实时、双向连接的通信通道。WebSocket协议于2008年由IETF（国际互联网工程任务组）正式提出，并随后在2011年完善了相关规范。它的出现弥补了传统HTTP通信的不足，为Web应用程序提供了更好的实时交互性。
+
+### 一、WebSocket原理
+
+在传统的HTTP通信中，客户端与服务器之间往往只通过HTTP请求和响应进行数据交互。这种通信方式是同步的，即在收到服务器的响应后，客户端才能发送下一个请求。这种方式下，数据传输效率较低，且难以实现实时通信。
+
+相比之下，WebSocket提供了一种全新的通信方式。在WebSocket连接建立后，客户端和服务器之间可以不受限制地双向发送和接收数据。这使得WebSocket能够更好地支持实时应用的开发，如实时聊天、在线游戏等。
+
+### 二、WebSocket优势
+
+1. **实时性**：WebSocket提供了客户端与服务器间的实时双向通信，使得实时应用的数据能够实时更新在客户端上，为用户提供更好的体验。
+   
+2. **双向通信**：传统的HTTP请求只能由客户端发起，服务器无法主动向客户端推送数据。而WebSocket提供了一种双向通信机制，服务器可以主动向客户端发送数据，客户端也可以向服务器发送数据，从而使得数据的推送和订阅变得更加灵活。
+
+3. **数据格式可定制**：虽然WebSocket原生支持文本数据，但通过相应的库和工具，我们可以使其支持二进制数据、自定义协议等其他数据格式，满足不同场景下的需求。这使得WebSocket的应用领域更加广泛。
+
+### 三、使用场合
+
+WebSocket技术在许多场景中都有广泛的应用，以下列举了一些典型的应用场景：
+
+1. **在线游戏**：WebSocket协议与游戏逻辑相结合，可以实现客户端与服务器间的实时通信，使得玩家在游戏中能够实时看到其他玩家的动作和状态，提升游戏体验。
+
+2. **实时聊天**：WebSocket可以应用于在线聊天应用，用户可以在聊天窗口实时发送和接收信息，实现低延迟的聊天交互。
+
+3. **数据推送**：物联网、金融等场景下的数据推送可以通过WebSocket实现。服务器可以将需要推送给客户端的实时数据封装成WebSocket消息，客户端接收到消息后即可处理并展示给用户。
+
+4. **页面交互**：对于一些需要实时交互的Web应用，如在线文档、交互式报表等，WebSocket也可以提供更为流畅的用户体验。
+
+四、总结
+
+WebSocket作为一种新型的网络通信协议，以其实时性、双向通信和数据格式可定制等优势，在很多场景中都展现出了巨大的应用潜力。相比于传统的HTTP通信方式，WebSocket能够更好地支持现代Web应用的发展需求，为构建实时、互动的Web应用程序提供了强有力的支持。
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

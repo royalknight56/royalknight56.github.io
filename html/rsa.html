@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rsa</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <meta name="description" content="RSA算法是一种非对称加密算法，由Ron Rivest、Adi Shamir 和 Leonard Adleman 于1978年提出。非对称加密算法意味着有两"><meta name="keywords" content="RSA,数字签名,对称加密,非对称加密,公钥基础设施,密码学,信息安全,证书颁发机构,安全传输层协议,支付系统">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./RSA.html">
+    RSA
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./数字签名.html">
+    数字签名
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./对称加密.html">
+    对称加密
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./非对称加密.html">
+    非对称加密
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./公钥基础设施.html">
+    公钥基础设施
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./密码学.html">
+    密码学
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./信息安全.html">
+    信息安全
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./证书颁发机构.html">
+    证书颁发机构
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./安全传输层协议.html">
+    安全传输层协议
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./支付系统.html">
+    支付系统
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>rsa</h1>
+                    RSA算法是一种非对称加密算法，由Ron Rivest、Adi Shamir 和 Leonard Adleman 于1978年提出。非对称加密算法意味着有两个不同的密钥用于加密和解密数据，分别是公钥和私钥。RSA算法的安全性基于大数因子分解问题的困难性。
+
+在 RSA 算法中，公钥和私钥是一对密钥，公钥用于加密数据，私钥用于解密数据。发送方和接收方都需要有一个各自的密钥，这样通信过程才能够安全可靠。因为公钥是公开的，可以广泛传播，而私钥是保密的，无需共享。因此，RSA算法非常适合用于保护互联网上的数据安全和通信隐私。
+
+RSA 算法的主要步骤包括：
+
+1. 选择两个不同的大质数 p 和 q。这些质数应该是随机选择的、足够大，以保证加密过程的安全性。
+
+2. 计算乘积 n = pq。n 的大小将影响加密的数据量以及密钥的长度，通常 n 至少为 512 位。
+
+3. 计算欧拉函数 Euler's Totient Function，ϕ(n) = (p-1)(q-1)。
+
+4. 选择一个整数 e，使得 1 < e < ϕ(n) 且 gcd(e,ϕ(n)) = 1。e 通常被选为 65537，因为这个数值在当时被认为是非常安全的。
+
+5. 计算 d，使得 (d * e) % ϕ(n) = 1。可以利用扩展欧几里得算法求解。
+
+6. 公钥为 (n,e) ，私钥为 (n,d)。
+
+发送方用接收方的公钥加密数据，然后发送给接收方；接收方收到数据后，使用自己的私钥进行解密。
+
+值得注意的是，RSA算法的效率较低，特别是在加密大量数据时。实际上，RSA通常与对称加密算法（如AES）结合使用。RSA用于加密对称密钥，然后利用对称密钥加密大量的数据。这种混合方法提高了通信的效率。
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>websockets</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <meta name="description" content="WebSockets是一种网络通信协议，它允许在客户端和服务器之间建立一个双向、实时的连接。这种协议使得客户端和服务器之间的数据交换变得更加简单和高效，特别"><meta name="keywords" content="websockets,internet,communication,实时,streaming,WebSocket,protocol,data,transmission,network,API,online,browser,client,server.">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./websockets.html">
+    websockets
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./internet.html">
+    internet
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./communication.html">
+    communication
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./实时.html">
+    实时
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./streaming.html">
+    streaming
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./WebSocket.html">
+    WebSocket
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./protocol.html">
+    protocol
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./data.html">
+    data
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./transmission.html">
+    transmission
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./network.html">
+    network
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./API.html">
+    API
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./online.html">
+    online
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./browser.html">
+    browser
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./client.html">
+    client
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./server..html">
+    server.
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>websockets</h1>
+                    WebSockets是一种网络通信协议，它允许在客户端和服务器之间建立一个双向、实时的连接。这种协议使得客户端和服务器之间的数据交换变得更加简单和高效，特别是在需要实时交互的应用中，如在线游戏、即时通讯、远程桌面等。
+
+WebSockets的主要特点如下：
+
+1. **双向通信**：与传统的HTTP请求/响应模型不同，WebSockets允许服务器主动向客户端发送数据，同时客户端也可以主动向服务器发送数据。这使得双向通信变得实时和高效。
+
+2. **实时性**：由于WebSockets提供了连续的双向通信，因此非常适合需要实时交互的应用场景。例如，在线游戏、实时聊天、实时数据更新等。
+
+3. **数据格式**：WebSockets支持多种数据格式，包括文本、二进制数据等。这使得开发者可以根据自己的需求选择合适的数据格式进行通信。
+
+4. **地址空间**：WebSockets使用固定的端口（通常是80或443，具体取决于服务器配置），因此在Internet上可以轻松地找到并访问这些WebSocket服务器。
+
+5. **可扩展性**：随着Web应用程序的发展，可能需要支持更多的客户端和服务器之间的连接。WebSockets提供了可扩展的API和协议，可以方便地扩展和集成到现有的应用程序中。
+
+要实现WebSockets，通常需要以下几个步骤：
+
+1. **服务器端配置**：首先需要在服务器端配置WebSocket服务。这通常涉及到选择一个WebSocket库（如Socket.IO、WebSocket-Node等）并按照库的文档进行配置和编程。
+
+2. **开发客户端应用**：接下来需要开发一个客户端应用，该应用需要能够与WebSocket服务器建立连接并进行通信。这可以使用各种编程语言和框架来完成，例如JavaScript、Python、Java等。
+
+3. **测试**：最后需要对 WebSocket 应用进行全面的测试，以确保其在不同场景下都能正常工作，并且能够处理各种异常情况。
+
+总的来说，WebSockets提供了一种高效、实时、双向的网络通信方式，使得开发者可以更容易地构建出复杂的应用程序，特别是那些需要实时交互的应用。然而，WebSocket并非适用于所有类型的应用，因此在决定是否使用WebSocket时，需要根据具体的应用场景和需求进行权衡。
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

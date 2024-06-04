@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关系型数据库</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <meta name="description" content="关系型数据库管理系统（RDBMS）是数据库系统中的一种，它使用结构化查询语言（SQL）作为数据操作的标准手段，以表格的形式存储数据，并且遵循阿列姆原则。关系"><meta name="keywords" content="关系型数据库,SQL,表格形式,结构化数据,索引,视图,事务,并发控制,数据库管理">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./关系型数据库.html">
+    关系型数据库
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./SQL.html">
+    SQL
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./表格形式.html">
+    表格形式
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./结构化数据.html">
+    结构化数据
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./索引.html">
+    索引
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./视图.html">
+    视图
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./事务.html">
+    事务
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./并发控制.html">
+    并发控制
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./数据库管理.html">
+    数据库管理
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>关系型数据库</h1>
+                    关系型数据库管理系统（RDBMS）是数据库系统中的一种，它使用结构化查询语言（SQL）作为数据操作的标准手段，以表格的形式存储数据，并且遵循阿列姆原则。关系型数据库的主要特点包括数据结构化、数据完整性约束、数据安全性以及数据关联性。
+
+关系型数据库的历史可以追溯到1970年代，当时光栅显示器的发明带动了光栅技术的兴起。光栅技术允许数据库开发者构建复杂的查询，这些查询能够处理网格中的复杂连接操作。然而，光栅显示器在显示大量数据时会遇到性能瓶颈，因此光栅技术在通用计算机上的应用受到了一定的限制。
+
+到了20世纪80年代，光栅技术的局限性变得越来越明显。此时，光栅卡和光栅显示器开始被用于桌面工作站，并且在数据库系统的性能提升方面发挥了重要作用。随着计算机硬件的发展和光栅技术的进步，关系型数据库管理系统的开发得到了促进。其中最著名的关系型数据库管理系统是Access和Oracle。甲骨文公司收购了仁科系统公司，从而成为全球最大的企业软件公司，这一举措进一步巩固了关系型数据库市场的地位。
+
+进入21世纪后，关系型数据库市场继续发展壮大，并且与其他非关系型数据库技术（如键值存储数据库、列式存储数据库和文档型数据库）相互竞争。关系型数据库的优势在于其复杂查询的能力以及对事务性数据的强大支持。因此，在需要处理大量关联数据的应用场景中，关系型数据库往往能够发挥出最佳的性能。
+
+尽管关系型数据库在处理结构化数据方面具有明显的优势，但它也面临着一些挑战。例如，在处理非结构化数据（如文本、图像、音频和视频）时，关系型数据库可能无法像非关系型数据库那样高效地存储和检索数据。此外，随着大数据时代的到来，关系型数据库需要更高的可扩展性和更高效的存储策略来应对日益增长的数据量。
+
+为了克服这些挑战，数据库研究人员开始探索如何将关系型数据库与非关系型数据库的优点结合起来。这种结合不仅能够充分利用两种技术的长处，还能够为客户提供更加全面和有效的数据管理解决方案。例如，一些关系型数据库管理系统开始引入NoSQL接口和框架，以便更好地支持非结构化数据的存储和处理。这些新型数据库系统被称为NoSQL数据库，它们能够提供灵活的数据模型和高效的数据访问方式。
+
+总的来说，关系型数据库在数据管理领域扮演着至关重要的角色。它的灵活性、可扩展性和强大的事务处理能力使得它在许多商业和科研应用中成为了首选的数据存储和管理方案。然而，随着技术的不断进步和应用需求的不断变化，关系型数据库也需要不断地进行创新和改进，以适应新的挑战和机遇。
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

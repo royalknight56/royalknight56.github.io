@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>系统调用</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <meta name="description" content="系统调用（System Call）是操作系统为应用程序提供的接口，它们允许应用程序请求操作系统服务。每个系统调用都对应一个或多个系统函数，这些函数执行特定的"><meta name="keywords" content="系统调用,函数调用,操作系统,系统内核,程序员,编程,API,CLI,驱动程序,性能优化,安全性,数据结构">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./系统调用.html">
+    系统调用
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./函数调用.html">
+    函数调用
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./操作系统.html">
+    操作系统
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./系统内核.html">
+    系统内核
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./程序员.html">
+    程序员
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./编程.html">
+    编程
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./API.html">
+    API
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./CLI.html">
+    CLI
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./驱动程序.html">
+    驱动程序
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./性能优化.html">
+    性能优化
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./安全性.html">
+    安全性
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./数据结构.html">
+    数据结构
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>系统调用</h1>
+                    系统调用（System Call）是操作系统为应用程序提供的接口，它们允许应用程序请求操作系统服务。每个系统调用都对应一个或多个系统函数，这些函数执行特定的操作并可能与其他系统函数交互。
+
+当一个应用程序执行一个系统调用时，它实际上是在向操作系统发送一个特殊的指令，以请求操作系统执行某个服务。操作系统中有一个名为“中断向量表”（Interrupt Vector Table）的数据结构，它将系统调用映射到相应的函数。当系统调用发生时，CPU会跳转到这个中断向量表中对应的位置，然后执行相应的函数。
+
+系统调用的主要优势在于它们使得应用程序与操作系统之间的交互变得更加简单和高效。通过使用系统调用，应用程序无需直接处理底层的硬件细节，从而可以将精力集中在应用程序本身的逻辑上。此外，系统调用还提供了保护和异常处理等功能，以确保应用程序的正确性和稳定性。
+
+常见的系统调用包括文件操作、进程控制、内存管理、设备I/O等。例如，文件操作相关的系统调用可以用于打开、关闭、读取和写入文件等操作。进程控制相关的系统调用可以用于创建、结束进程以及获取进程信息等操作。内存管理相关的系统调用可以用于分配和释放内存空间以及修改内存保护等信息。设备I/O相关的系统调用可以用于读写磁盘文件、管理设备分配以及处理设备错误等操作。
+
+需要注意的是，虽然系统调用为应用程序提供了强大的功能，但同时也增加了一定的复杂性。编写正确且高效的使用系统调用的代码需要仔细考虑参数传递、返回值处理以及可能出现的错误情况等多个方面。此外，不当使用系统调用可能会导致系统崩溃或数据丢失等问题，因此在使用系统调用时应务必谨慎。
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

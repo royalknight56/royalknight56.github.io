@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>public-privatekeypair</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <meta name="description" content="A public-private keypair is a unique set of symbols used in cryptographic tech"><meta name="keywords" content="public-keypair,encryption,digital,signature,keydistribution,security">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./public-keypair.html">
+    public-keypair
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./encryption.html">
+    encryption
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./digital.html">
+    digital
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./signature.html">
+    signature
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./keydistribution.html">
+    keydistribution
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./security.html">
+    security
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>public-privatekeypair</h1>
+                    A public-private keypair is a unique set of symbols used in cryptographic techniques, specifically in public key cryptography. It consists of two keys: one public and one private. These keys are mathematically related but keep their relationship confidential. The public key can be freely distributed to anyone, while the private key must be kept secure and secret by the owner.
+
+Public key cryptography is建立在数论的基础之上，其安全性依赖于两个定理：1) RSA定理（Rivest-Shamir-Adleman）：没有一个多项式时间算法可以破解一个大素数的积；2) 鸽巢原理（Pollard's Pi-Number Theorem）：不可能找到一个能够整除n的素数p，使得对于所有大于1的整数x，都有(x*p)模n同余于1。
+
+The public-key infrastructure (PKI) is the foundation of modern cryptography, which enables secure communication over insecure channels. In PKI, each user generates a public-private key pair and uses the public key to encrypt messages that only the owner can decrypt using the private key. This system is used for tasks such as secure email通信, digital signatures, secure web browsing, and secure file transfer.
+
+Public-private keypairs have several applications in cybersecurity, including:
+
+1. Secure Key Exchange: Public-private keypairs allow two parties to securely exchange encryption keys without the risk of interception or eavesdropping. This is crucial for secure communication, such as in the OpenPGP protocol used in TLS/SSL encryption.
+
+2. Digital Signatures: A sender uses their private key to create a digital signature for a message, which can be verified with the recipient's public key. This ensures the integrity and authenticity of the message.
+
+3. Password Management: Instead of storing user passwords in plain text, systems can store them securely using public-private keypairs. This secures passwords and allows users to use simple passwords for authentication.
+
+4. Identity Verification: Public-key cryptography can be used to verify the identity of users and devices, ensuring that they are who they claim to be. This is used in authentication protocols, such as in HTTP Basic Authentication or OAuth 2.0.
+
+5. Encryption of Data: The public key can be used to encrypt data that only the owner can decrypt using their private key. This is used in various scenarios, such as encrypting sensitive user data stored on a computer or securing access to web services.
+
+In summary, public-private keypairs play a vital role in modern cryptography, providing a secure method for exchanging keys, creating digital signatures, and verifying identities, among other applications.
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

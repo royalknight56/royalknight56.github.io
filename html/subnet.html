@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>subnet</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <meta name="description" content="Subnet는 컴퓨터网络에서 사용자와 특정 네트워크에서의 장치를 부여하는 주소 공간을 나누는 데 사용됩니다. Subnet은 셀과 같은 네트워"><meta name="keywords" content="subnet,networksegmentation,VLAN,IPaddress,router,firewall,dial-up,broadband,VPN,dynamicIP,staticIP,subnetmask,IPaddressing,router,networkaddress,uncategorized,subnetwork,broadcastdomain">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./subnet.html">
+    subnet
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./networksegmentation.html">
+    networksegmentation
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./VLAN.html">
+    VLAN
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./IPaddress.html">
+    IPaddress
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./router.html">
+    router
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./firewall.html">
+    firewall
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./dial-up.html">
+    dial-up
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./broadband.html">
+    broadband
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./VPN.html">
+    VPN
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./dynamicIP.html">
+    dynamicIP
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./staticIP.html">
+    staticIP
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./subnetmask.html">
+    subnetmask
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./IPaddressing.html">
+    IPaddressing
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./router.html">
+    router
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./networkaddress.html">
+    networkaddress
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./uncategorized.html">
+    uncategorized
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./subnetwork.html">
+    subnetwork
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./broadcastdomain.html">
+    broadcastdomain
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>subnet</h1>
+                    Subnet는 컴퓨터网络에서 사용자와 특정 네트워크에서의 장치를 부여하는 주소 공간을 나누는 데 사용됩니다. Subnet은 셀과 같은 네트워크 보안 조치를 위한 기초를 제공하며, 각 부분에 특정 거버넌스와 네임스페이스가 부여됩니다. 이러한 구조를 통해 여러 서비스들이 동일한 네트워크에서 유니크하게 고유한 특성을 가질 수 있도록 해줍니다.
+
+### Subnet의 구성 요소
+
+1. **사이드 마스크(Subnet Mask)**: 사이드 마스크는 논리적인 네트워크 차원에서 또는 직접 연결된 네트워크 장치와 네트워크 인터페이스 사이의 주소 차이를 지정합니다. 예를 들어, /24는 255.255.255.0을 의미하며, 이것은 24비트의 주소 공간을 나누는 데 필요합니다.
+2. **클러스터 주소(Guid)**: 클러스터 주소는 네트워크에서 동일한 트리거 지점을 가진 다른 장치를 식별하는 데 사용됩니다. 이것은 중앙 관리 기관(CMAC) 혹은 디폴트 마스크 어셈블린(DMZ)에서 정책을 실행할 때 사용됩니다.
+3. **서브ネット 드라이브(Number of Subnet Masks)**: 서브넷 드라이브는 서브넷에 있는 네트워크 장치들이 포함 될 수 있는 네트워크 차원의 수를 나타냅니다. 예를 들어, /24 서브넷은 256개의 서브넷 드라이브를 가질 수 있습니다.
+
+### Subnet을 사용한 미들웨어 부여
+
+IP 주소 공간을 구분하는 데 사용되는 핵심적인 Subnet 마스크는 다음과 같은 몇 가지 작업을 수행하여 생성될 수 있습니다:
+
+1. **클러스터 주소 공간 만들기**: IP 주소 공간을 계획된 크기로 분할합니다. 예를 들어, /16을 사용하여 65,536 개의 IP 주소를 부여할 수 있습니다. 그럼에도 불구하고, 일부 기술 및 프로토콜은 더 작은 주소 공간을 원하는 대로 만들 수 있도록 해서 불필요한 부족한 IP 주소나 네임스페이스 수량을 할당하지 않아도 됩니다.
+2. **클러스터 주소 공간에서 서브넷 드라이브 추가**: /24 서브넷에 추가 적용할 수 있는 서브넷 드라이브 수를 결정합니다. 예를 들어, 192.168.1.0/24에 +2는 192.168.1.128 ~ 192.168.1.255로 추가로 구성된다는 것을 의미합니다.
+3. **서브넷 마스크 정의: 그들이 사용하는 사이드 마스크와 동일한 크기로, 논리적으로 계획된 주소 공간을 나눈다.
+
+Subnet을 이용한 서브넷 부여는 디자인과 관련된 일련의 중요한 이유로 인해 선택될 수도 있습니다:
+
+- **컴퓨터 및 서버 가상화**: 서버 내부에서 각 서비스가 동일한 네트워크 자원을 공유하는 경우 쓰레기 수고를 줄일 수 있습니다.
+- **보안 그룹화**: 특정 네트워크 장치가 독특한 네트워크 세부 정보에 접근할 수 있도록 하는 데 필요합니다.
+- **서비스 나누기**: 다수의 서비스를 병렬로 진행하는 경우, 각 서비스가 하나의 크기로 제한되어 전력 낭비를 방지할 수 있습니다.
+- **네트워크 유연성:** 네트워크 자산을 확장하거나 변경할 때, Subnet 마스크와 정책을 쉽게 조정할 수 있습니다.
+
+### Subnet 마스크와 정책의 문제
+
+그러나 Subnet 마스크와 정책을 사용하면서 일부 어려움도 겪을 수 있습니다:
+
+1. **마스크 범위 및 디폴트 마스크 문제**: 네트워크 보안 및 트래픽 감소를 위한 적절한 마스크만 정의하지 못할 수 있거나, 정의된 마스크 범위가 네트워크 발전과 요구 사항의 변화에 대비하여 부족할 수 있습니다.
+2. **서브넷 마스크 충분성**: 필요한 서브넷 드라이브 수 외에 네임스페이스와 특정 논리적 구간을 포함하기에 충분한 마스크를 정의해야 하는 경우 가질 수 있는 문제입니다.
+3. **클러스터 주소 공간 부족**: 적절한 크기의 크레이스 만들 수 있는 IP 주소 공간이 없거나 부족하여 부족한 IP 주소를 할당할 수 있다는 어려운 상황에 처할 수 있습니다.
+4. **클러스터 룩업 테이블 매칭**: 모든 서브넷들을 포함하는 공간을 찾아가며, 이러한 네트워크 자원을 사용하는 데 필요한 IP 주소를 찾는 과정이 복잡해집니다.
+5. **클러스터 주소 공간의 정책 표준화**: 네임스페이스와 같은 정책을 적용하기에 이상적인 방법이나 표준이 없고, 네트워크 전문가가 다양한 유형의 서브넷 구조를 포괄할 수 있는 전문가 도구가 필요합니다.
+
+따라서, IP 주소 공간을 식별하고 적절한 Subnet 마스크와 정책을 선택하는 데 있어 적절한 경험이 필요합니다. 또한, 정교한 방법으로 Subnet 마스크와 정책을 관리하고 동작하는 데 도전 및 시도가 필요합니다. 예를 들어 네트워크 모델링 소프트웨어는 이러한 과정을 위한 강력한 도구 활동으로 작동하여, 불편한 문제를 해결하고, 네트워크 시나리오를 최적화하는 데 도움을 줍니다.
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

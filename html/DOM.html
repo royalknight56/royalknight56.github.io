@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <meta name="description" content="DOM（文档对象模型）是一个编程接口，它表示HTML和XML文档的结构，并允许程序和脚本动态地访问和更新文档的内容、结构和样式。DOM将文档分解为不同的节点"><meta name="keywords" content="DOM,文档对象模型,JavaScript,框架,HTML,CSS,查询,更新,属性,事件,整体,响应,子节点,父节点,引用,节点,结构,遍历,更新周期,DOM树,选择器,代理,响应式,事件处理,DOM操作,元素,查询方法,事件监听,更新机制,数据双向绑定">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./DOM.html">
+    DOM
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./文档对象模型.html">
+    文档对象模型
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./JavaScript.html">
+    JavaScript
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./框架.html">
+    框架
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./HTML.html">
+    HTML
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./CSS.html">
+    CSS
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./查询.html">
+    查询
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./更新.html">
+    更新
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./属性.html">
+    属性
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./事件.html">
+    事件
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./整体.html">
+    整体
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./响应.html">
+    响应
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./子节点.html">
+    子节点
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./父节点.html">
+    父节点
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./引用.html">
+    引用
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./节点.html">
+    节点
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./结构.html">
+    结构
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./遍历.html">
+    遍历
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./更新周期.html">
+    更新周期
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./DOM树.html">
+    DOM树
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./选择器.html">
+    选择器
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./代理.html">
+    代理
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./响应式.html">
+    响应式
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./事件处理.html">
+    事件处理
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./DOM操作.html">
+    DOM操作
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./元素.html">
+    元素
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./查询方法.html">
+    查询方法
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./事件监听.html">
+    事件监听
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./更新机制.html">
+    更新机制
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./数据双向绑定.html">
+    数据双向绑定
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>DOM</h1>
+                    DOM（文档对象模型）是一个编程接口，它表示HTML和XML文档的结构，并允许程序和脚本动态地访问和更新文档的内容、结构和样式。DOM将文档分解为不同的节点和元素，每个节点都有其自己的属性和方法，用于操作和访问文档中的数据。
+
+### DOM的核心功能
+
+1. **节点访问**：DOM通过树形结构访问文档中的每个元素，每个元素都可以通过标签名、ID或名称来唯一标识。
+2. **元素修改**：用户可以通过DOM的API修改文档中元素的文本内容、属性和样式。
+3. **事件处理**：DOM支持事件处理机制，允许开发者响应用户的交互，如点击、鼠标悬停等。
+4. **列表和集合**：DOM提供了一套丰富的集合接口，如遍历、查找和过滤元素的集合。
+5. **样式和主题应用**：DOM可以用来更改文档中元素的颜色、字体、背景等样式，以及应用全局的主题或CSS。
+6. **性能优化**：通过DOM的某些操作，如组合和重排，可以提高页面的性能，减少页面的重绘和回流。
+
+### 常用的DOM API
+
+1. **getElementById**：根据ID获取元素。
+2. **getElementsByClassName**：根据类名获取多个元素。
+3. **getElementsByTagName**：根据标签名获取多个元素。
+4. **querySelector**：根据CSS选择器获取单个元素。
+5. **querySelectorAll**：根据CSS选择器获取多个元素。
+6. **createElement**：创建新的HTML元素。
+7. **appendChild**：在指定节点后添加子节点。
+8. **removeChild**：从指定节点删除子节点。
+9. **insertBefore**：在指定节点前插入新节点。
+10. **replaceChild**：用新节点替换指定节点。
+11. **forEach**：对集合中的每个节点执行特定操作。
+12. **addEventListener**：为元素添加事件监听器。
+13. **removeEventListener**：移除元素上的事件监听器。
+
+### DOM的操作示例
+
+假设我们有以下简单的HTML结构：
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+   <title>DOM Example</title>
+</head>
+<body>
+    <ul id="list">
+        <li> item 1</li>
+        <li> item 2</li>
+        <li> item 3</li>
+    </ul>
+   <button id="add">Add new item</button>
+
+   <script src="app.js"></script>
+</body>
+</html>
+```
+
+在app.js文件中，我们可以使用DOM API来操作上述HTML结构：
+
+```javascript
+// 获取列表和按钮元素
+const list = document.getElementById('list');
+const addButton = document.getElementById('add');
+
+// 添加新元素到列表
+function addListItem(newText) {
+    const newItem = document.createElement('li');
+    newItem.textContent = newText;
+    list.appendChild(newItem);
+}
+
+// 处理按钮点击事件
+addButton.addEventListener('click', () => {
+    addListItem('New item');
+});
+
+// 更新列表项
+function updateListItemText(index, newText) {
+    const items = list.getElementsByTagName('li');
+    items[index].textContent = newText;
+}
+
+// 更新第三个列表项
+updateListItemText(2, 'Updated item 3');
+```
+
+通过上述示例，我们可以看到DOM的强大功能和它在实现复杂动态网页方面的应用价值。通过DOM的操作，我们可以对网页的内容、结构和样式进行精细的控制，从而提供更加丰富和互动的用户体验。
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <meta name="description" content="HTTP（超文本传输协议）是一种用来传输数据的通信协议。它是互联网上应用最广泛的一种网络协议。所有的网页都使用HTTP来传输信息。HTTP协议的主要特点包括"><meta name="keywords" content="http,https,www,html,url,tool,website,browser,request,header,parameters,cookie,download,file,upload,form,security,authentication,api,data,transmission,interface,response,status,error">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./http.html">
+    http
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./https.html">
+    https
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./www.html">
+    www
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./html.html">
+    html
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./url.html">
+    url
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./tool.html">
+    tool
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./website.html">
+    website
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./browser.html">
+    browser
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./request.html">
+    request
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./header.html">
+    header
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./parameters.html">
+    parameters
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./cookie.html">
+    cookie
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./download.html">
+    download
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./file.html">
+    file
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./upload.html">
+    upload
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./form.html">
+    form
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./security.html">
+    security
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./authentication.html">
+    authentication
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./api.html">
+    api
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./data.html">
+    data
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./transmission.html">
+    transmission
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./interface.html">
+    interface
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./response.html">
+    response
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./status.html">
+    status
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./error.html">
+    error
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>HTTP</h1>
+                    HTTP（超文本传输协议）是一种用来传输数据的通信协议。它是互联网上应用最广泛的一种网络协议。所有的网页都使用HTTP来传输信息。HTTP协议的主要特点包括简单、快速、灵活以及可靠。
+
+HTTP的工作原理基于客户端-服务器模型。客户端是用户浏览器或其他应用程序；服务器是网络上的一个计算机，它提供资源、数据或服务。当用户在浏览器中输入一个网址时，浏览器会向对应的服务器发送一个HTTP请求。这个请求包含了请求的方法、URI（统一资源标识符）、HTTP版本等信息。
+
+服务器在接收到请求后，会处理这个请求并返回一个HTTP响应。这个响应包含了状态码、响应头（包含了一些元数据，比如内容类型、压缩方式等）和响应体（实际的资源内容）。状态码表示了请求的处理结果，例如200表示成功，404表示未找到等。
+
+HTTP请求方法主要有GET、POST、PUT、DELETE等。这些方法规定了客户端如何与服务器交换信息。其中，GET主要用于查询或读取资源，POST用于提交新的或更新的资源。
+
+HTTP协议也存在一些安全问题，比如著名的SQL注入攻击。为了解决这些问题，后来的HTTPS出现了。HTTPS是HTTP的安全版本，它在HTTP和TCP之间添加了一个安全层（SSL或TLS），可以对数据进行加密，防止数据在传输过程中被窃取或篡改。
+
+总的来说，HTTP是一种基础且重要的网络协议，它在互联网的运作中扮演着关键角色。HTTP协议的简单、快速、灵活和可靠性使得它成为了一种广泛使用的网络协议。然而，随着网络环境的发展和安全需求的提高，HTTPS作为一种更安全的替代方案也应运而生，并逐渐得到了广泛的采用。
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

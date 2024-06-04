@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>路由</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <meta name="description" content="路由，即网络中的路径选择，是在数据包从源到目的地的传输过程中，选择最佳路径的方式。它涉及到一系列的选择标准，以确保数据包能够高效、安全地到达目的地。
+
+在计"><meta name="keywords" content="路由,网络,协议,IP,地址,路由器,交换机,MPLS,DNS,VPN,外网,内网,子网,路由表,路由策略">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./路由.html">
+    路由
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./网络.html">
+    网络
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./协议.html">
+    协议
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./IP.html">
+    IP
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./地址.html">
+    地址
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./路由器.html">
+    路由器
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./交换机.html">
+    交换机
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./MPLS.html">
+    MPLS
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./DNS.html">
+    DNS
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./VPN.html">
+    VPN
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./外网.html">
+    外网
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./内网.html">
+    内网
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./子网.html">
+    子网
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./路由表.html">
+    路由表
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./路由策略.html">
+    路由策略
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>路由</h1>
+                    路由，即网络中的路径选择，是在数据包从源到目的地的传输过程中，选择最佳路径的方式。它涉及到一系列的选择标准，以确保数据包能够高效、安全地到达目的地。
+
+在计算机网络中，数据包是通过路由器进行传输的。路由器根据数据包的目的IP地址，选择最合适的路径，并将数据包转发到下一个网络设备。这个过程被称为路由选择。
+
+路由选择需要考虑多种因素，包括：
+
+1. 路由器的路由表：路由表是路由器中存储的一组路由规则，它指定了数据包应该如何转发。路由表可以根据设备的配置自动更新，或者手动更改。
+2. 网络拓扑：网络拓扑是指网络中设备的物理或逻辑布局。路由器根据网络拓扑选择最佳路径，以确保数据包能够通过最短或最快的路径到达目的地。
+3. 带宽和延迟：带宽是指网络连接的带宽，而延迟是指数据包从源到目的地的传输时间。路由器会根据网络的带宽和延迟选择最佳路径，以确保数据包的传输效率和质量。
+4. 负载均衡：负载均衡是指在不同设备之间分配网络流量的方法。路由器可以根据设备的负载情况选择最佳路径，以实现更高的网络性能和可靠性。
+
+在现代网络中，路由选择通常依赖于复杂的算法和协议，如OSPF（开放最短路径优先）、BGP（边界网关协议）等。这些算法和协议能够根据网络的变化动态调整路由表，以适应不同的网络环境和需求。
+
+除了静态路由和动态路由外，还有其他一些路由技术可供选择，例如路由协议和多层交换等。它们能够提供更高级的路由功能，以满足特定网络应用的需求。
+
+总之，路由是计算机网络中不可或缺的一部分，它负责将数据包从源到目的地的传输过程中找到最佳路径。路由选择需要考虑多种因素，并依赖于复杂的算法和协议。通过合理设计路由器和优化网络配置，可以实现高效、安全和可靠的网络通信。
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>socketserver</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <meta name="description" content="SocketServer是一种网络编程中的服务器，它实现了TCP协议，并允许在单个主机上监听多个客户端连接。这是一个简单的Python示例，展示如何使用So"><meta name="keywords" content="socketserver,network,client,communication,server,ip,port,protocol,data,transport,socket,application,http,https,tcp,udp">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./socketserver.html">
+    socketserver
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./network.html">
+    network
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./client.html">
+    client
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./communication.html">
+    communication
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./server.html">
+    server
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./ip.html">
+    ip
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./port.html">
+    port
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./protocol.html">
+    protocol
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./data.html">
+    data
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./transport.html">
+    transport
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./socket.html">
+    socket
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./application.html">
+    application
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./http.html">
+    http
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./https.html">
+    https
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./tcp.html">
+    tcp
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./udp.html">
+    udp
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>socketserver</h1>
+                    SocketServer是一种网络编程中的服务器，它实现了TCP协议，并允许在单个主机上监听多个客户端连接。这是一个简单的Python示例，展示如何使用SocketServer处理客户端的连接：
+
+```python
+import socketserver
+
+class MySocketServer(socketserver.TCPServer):
+    def handle_client(self, client_socket):
+        # 处理客户端连接的逻辑
+        request = client_socket.recv(1024)
+        print(f"Received: {request.decode('utf-8')}")
+        client_socket.send(b"ACK")
+        client_socket.close()
+
+if __name__ == "__main__":
+    server = MySocketServer(('0.0.0.0', 9999), MySocketServer.handle_client)
+    server.serve_forever()
+```
+
+在这个例子中，我们创建了一个自定义的SocketServer类，它继承自`socketserver.TCPServer`。我们重写了`handle_client`方法，它将在每个客户端连接时被调用。这里，我们简单地打印了接收到的数据并将其发送回客户端。
+
+最后，我们在主函数中创建了一个`MySocketServer`实例，并将其绑定到9999端口。然后，我们启动服务器，它将无限期地监听客户端连接。
+
+要测试这个服务器，你可以使用一个简单的Python客户端进行连接。以下是一个客户端示例：
+
+```python
+import socket
+
+client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+client_socket.connect(('localhost', 9999))
+client_socket.send(b"Hello, Server!")
+response = client_socket.recv(1024)
+print(f"Received: {response.decode('utf-8')}")
+client_socket.close()
+```
+
+这个客户端连接到服务器并发送了一条消息。服务器接收到消息后，将其原样返回给客户端。
+
+请注意，这个例子仅用于演示目的。在实际应用中，你需要考虑诸如错误处理、超时、多线程或多进程管理等更多因素。SocketServer只是一个简单的实现，适用于许多基本的网络编程任务。
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

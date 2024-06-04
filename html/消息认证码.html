@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>消息认证码</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <meta name="description" content="消息认证码（Message Authentication Code，简称MAC）是一种用于验证数据完整性和来源的密码学技术。它是一种加密算法，通过计算消息的"><meta name="keywords" content="消息认证码,验证消息,安全认证,数字签名,加密技术,对称密钥,非对称密钥,密码学,数据完整性.">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./消息认证码.html">
+    消息认证码
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./验证消息.html">
+    验证消息
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./安全认证.html">
+    安全认证
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./数字签名.html">
+    数字签名
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./加密技术.html">
+    加密技术
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./对称密钥.html">
+    对称密钥
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./非对称密钥.html">
+    非对称密钥
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./密码学.html">
+    密码学
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./数据完整性..html">
+    数据完整性.
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>消息认证码</h1>
+                    消息认证码（Message Authentication Code，简称MAC）是一种用于验证数据完整性和来源的密码学技术。它是一种加密算法，通过计算消息的一个特定摘要来生成一个预期的验证码。MAC的主要目的是确保消息在传输过程中没有被篡改。
+
+在网络安全领域，消息认证码被广泛应用于各种场景，如数字签名、身份验证、数据完整性检查和保密通信等。MAC的基本原理是将消息分成固定大小的块，并对每个块应用相同的哈希函数。哈希函数将输入数据转换为固定长度的输出，这个输出就是消息认证码。
+
+以下是关于消息认证码的一些详细信息：
+
+1. 哈希函数：哈希函数是一种将任意长度的输入数据映射到固定长度输出的单向加密函数。它具有唯一性、不可预测性和不可篡改性。常见的哈希函数有SHA-256、SHA-384和SHA-512等。
+
+2. 消息分组：消息认证码通常通过对消息进行分组来生成。一个典型的消息分组大小为64字节。消息分组可以被视为消息的一部分，加上MAC计算所需的额外信息。
+
+3. 散列函数与加盐：为了提高安全性，可以在散列函数中加入随机数（盐值），从而增加攻击者针对MAC的攻击难度。盐值是在消息发送前添加到原始消息上的，且对每个消息都不同。
+
+4. 认证码生成：首先，使用哈希函数对消息进行哈希，得到一个消息摘要。然后，将该摘要与私钥（在需要双向认证的情况下）或对称密钥（在需要单向认证的情况下）结合，使用MAC算法生成消息认证码。最后，将计算出的认证码附加在原始消息上一起发送。
+
+5. 消息认证码验证：在接收到消息时，接收方可以使用相同的哈希函数和私钥（或对称密钥）来计算自己的消息摘要。接着，将计算出的摘要与接收到的认证码进行比较。如果两者相同，那么表明消息在传输过程中没有被篡改，且来源可靠。
+
+总之，消息认证码是一种重要的密码学技术，用于确保消息的完整性和来源。通过使用哈希函数和密钥操作，以及消息分组的概念，消息认证码能够有效地抵抗多种攻击，从而在网络安全领域发挥着关键作用。
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

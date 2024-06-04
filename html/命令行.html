@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>命令行</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <meta name="description" content="命令行又称命令提示符或Shell提示符，是Windows操作系统中的一个重要界面元素，它允许用户与操作系统进行交互。通过在键盘上输入特定的命令，用户可以执行"><meta name="keywords" content="命令行,CLI,shell,prompt,input,output,redirect,arguments,options,variables,history,background,execution,scripting,automation,操作系统,命令,参数,管道,导航,任务,自动化,调试,故障排除.">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./命令行.html">
+    命令行
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./CLI.html">
+    CLI
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./shell.html">
+    shell
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./prompt.html">
+    prompt
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./input.html">
+    input
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./output.html">
+    output
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./redirect.html">
+    redirect
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./arguments.html">
+    arguments
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./options.html">
+    options
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./variables.html">
+    variables
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./history.html">
+    history
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./background.html">
+    background
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./execution.html">
+    execution
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./scripting.html">
+    scripting
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./automation.html">
+    automation
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./操作系统.html">
+    操作系统
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./命令.html">
+    命令
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./参数.html">
+    参数
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./管道.html">
+    管道
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./导航.html">
+    导航
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./任务.html">
+    任务
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./自动化.html">
+    自动化
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./调试.html">
+    调试
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./故障排除..html">
+    故障排除.
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>命令行</h1>
+                    命令行又称命令提示符或Shell提示符，是Windows操作系统中的一个重要界面元素，它允许用户与操作系统进行交互。通过在键盘上输入特定的命令，用户可以执行各种任务，如访问文件和目录、运行程序、管理系统设置等。
+
+在Windows操作系统中，命令行通常由一系列按Enter键即可执行的命令组成。这些命令可以是简单的文本字符串，也可以包含复杂的参数和选项。通过组合这些命令，用户可以完成各种任务，从基本的文件管理和系统审计到更高级的操作，如编程和系统管理。
+
+命令行界面（CLI）相对于图形用户界面（GUI）而言，是一种更侧重于键盘操作的交互方式。它要求用户记住和理解特定的命令，以便能够有效地完成任务。虽然学习和使用命令行可能需要一定的时间和努力，但它提供了更高的效率和灵活性，特别是在处理系统和网络管理任务时。
+
+在Windows系统中，命令行可以通过多种方式访问。常见的途径包括：
+
+1. Windows终端：这是最直接的访问命令行的方式，可以提供历史命令、快捷键、运行模式等功能。
+2. 命令提示符：在早期的Windows版本中，命令提示符是访问命令行的主要方式。虽然现在已经不再作为独立程序存在，但许多旧的系统仍然保留着这一功能。
+3. PowerShell：这是一种更现代、更强大的命令行界面，支持丰富的命令集和脚本编程能力。PowerShell已成为Windows系统管理的标准工具，逐渐取代了传统的命令行界面。
+
+无论使用哪种方式，掌握命令行都是一个重要的技能，尤其是在处理Windows操作系统和进行系统管理时。通过熟悉命令行，用户可以更高效地完成任务，提高工作效率，并深入了解操作系统的工作原理。
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

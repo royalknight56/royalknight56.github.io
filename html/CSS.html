@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <meta name="description" content="CSS，全称为Cascading Style Sheets（层叠样式表），是一种用于描述网页外观和格式化的语言。CSS可以与HTML页面一起使用，以控制网页"><meta name="keywords" content="CSS,属性,选择器,混合,样式,结构,规则,函数,声明,继承,媒体查询,动画,变形,响应式,浏览器兼容性,网页设计,代码片段">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./CSS.html">
+    CSS
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./属性.html">
+    属性
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./选择器.html">
+    选择器
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./混合.html">
+    混合
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./样式.html">
+    样式
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./结构.html">
+    结构
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./规则.html">
+    规则
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./函数.html">
+    函数
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./声明.html">
+    声明
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./继承.html">
+    继承
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./媒体查询.html">
+    媒体查询
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./动画.html">
+    动画
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./变形.html">
+    变形
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./响应式.html">
+    响应式
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./浏览器兼容性.html">
+    浏览器兼容性
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./网页设计.html">
+    网页设计
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./代码片段.html">
+    代码片段
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>CSS</h1>
+                    CSS，全称为Cascading Style Sheets（层叠样式表），是一种用于描述网页外观和格式化的语言。CSS可以与HTML页面一起使用，以控制网页的布局、字体、颜色、动画等视觉元素。CSS使得网页设计者能够创建具有美观和良好用户体验的网页，而无需直接编辑HTML代码。
+
+在HTML文档中，CSS的作用主要有以下三种：
+
+1. 用于定义网页元素的样式和布局，例如文本的字体、大小、颜色、间距等；
+2. 用于控制网页元素的行为，例如超级链接的默认行为、表单的验证等；
+3. 用于增强网页的交互性和动态性，例如通过CSS实现动画效果、响应式设计等。
+
+### CSS的基本语法
+
+CSS规则由选择器（selector）和声明块（declaration block）组成。选择器用于指定要应用样式的HTML元素，声明块则包含一个或多个属性和值对，用于定义元素的样式。
+
+例如，下面的CSS规则将文本的字体、大小和颜色分别指定为Arial、16px和红色：
+
+```css
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: red;
+}
+```
+
+需要注意的是，CSS规则是区分大小写的，而且每个属性名称都必须使用驼峰命名法（camelCase），即每个单词的首字母应该转换为小写，除了第一个单词。
+
+### CSS的选择器
+
+CSS选择器是一种用于指定要应用样式的HTML元素的方法。有多种类型的选择器，包括：
+
+1. **类型选择器**：直接使用HTML元素的名称，例如`p`、`div`等。
+2. **类选择器**：以点`.`开头，后跟类名，例如`.classname`。
+3. **ID选择器**：以井号`#`开头，后跟ID名，例如`#idname`。
+4. **属性选择器**：指定元素的某个属性及其值，例如`[type="text"]`。
+5. **伪类选择器**：用于定义元素的特殊状态，例如`:hover`、`:active`等。
+6. **伪元素选择器**：用于定义元素的特定部分，例如`::before`、`::after`等。
+
+### CSS的声明块
+
+CSS声明块是一个以大括号`{}`括起来的属性和值对序列。每个属性和值对都表示一个样式规则，例如：
+
+```css
+{
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: red;
+}
+```
+
+需要注意的是，在CSS3中，可以使用`@keyframes`规则来创建动画。`@keyframes`规则允许定义一系列关键帧（keyframes），每个关键帧都指定一个时间点和一个样式，通过这些关键帧可以创建动画的中间态。动画效果最终由浏览器根据当前时间点的样式计算得出。
+
+### CSS的优势
+
+与其他可视化网页设计语言相比，CSS具有以下几个显著优势：
+
+1. **易学易用**：CSS相对简单，上手快，尤其是对于初学者来说，不需要太多的编程知识就可以开始学习和使用CSS进行网页设计。
+2. **灵活性**：CSS允许网页设计师独立于内容进行网页设计，可以轻松地调整网页的整体风格和布局，而不需要对HTML结构进行太多的修改。
+3. **效率**：利用CSS技术可以实现很多功能而不用进行代码编写,这样可以节省大量时间，并且使网页更有效率。设计师可以专注于内容的设计和展示而不会耗费太多时间在网页样式上。
+4. **可访问性**：CSS为网页设计提供了灵活的文本颜色方案和排版规则确保了色盲人士也能访问并理解网页内容。
+
+总之，CSS作为一种强大的网页设计工具得到了广泛的应用。无论您是初学者还是有一定经验的开发者，掌握CSS都是迈向成功网页设计师的第一步。通过学习CSS您将能够控制网页的外观和格式化，创造出既美观又易于使用的网页。
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

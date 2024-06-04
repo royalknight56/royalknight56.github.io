@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>哈希表</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <meta name="description" content="# 哈希表
+
+哈希表（Hash table，也叫散列表）是一种数据结构，它提供了快速的插入、删除和查找操作。这种数据结构通过使用哈希函数（Hash func"><meta name="keywords" content="哈希表,数据结构,键值对,查找,匹配,效率,抽象,实现,冲突解决,动态数组">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./哈希表.html">
+    哈希表
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./数据结构.html">
+    数据结构
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./键值对.html">
+    键值对
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./查找.html">
+    查找
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./匹配.html">
+    匹配
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./效率.html">
+    效率
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./抽象.html">
+    抽象
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./实现.html">
+    实现
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./冲突解决.html">
+    冲突解决
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./动态数组.html">
+    动态数组
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>哈希表</h1>
+                    # 哈希表
+
+哈希表（Hash table，也叫散列表）是一种数据结构，它提供了快速的插入、删除和查找操作。这种数据结构通过使用哈希函数（Hash function）将关键字（Key）映射到存储空间内的位置（即表中的某个位置），并在该位置存储相应的值（Value）。
+
+## 结构与原理
+
+哈希表由一系列哈希桶（Hash bucket）组成，每个哈希桶对应一个哈希函数。当向哈希表中插入一个新元素时，系统会使用哈希函数计算该元素的哈希值，并将这个值当作索引，将新元素放入相应的哈希桶中。如果两个不同的关键字映射到同一个哈希桶，那么我们称之为冲突（Collision）。冲突通常通过开放寻址法（OpenAddressing）或链地址法（Separate Chaining）来解决。
+
+## 功能特性
+
+1. **快速插入**：由于直接使用哈希函数计算位置，平均时间复杂度为 O(1)。
+2. **快速查找**：同样使用哈希函数，平均时间复杂度也是 O(1)。
+3. **删除操作**：也可以在常数时间内完成。
+
+## 应用场景
+
+哈希表在许多实际应用中都表现得非常出色，例如：
+
+- **字典/映射类型**：在编程语言中作为字典或映射类型，用于实现关联数组，即能快速访问键（Key）对应的值（Value）。
+- **数据库索引**：数据库中的索引通常使用哈希表来实现，以加快数据的检索速度。
+- **缓存（Cache）**：缓存对象常用的一种数据结构，可以使用哈希表来实现，以快速保存和读取缓存项。
+- **去重**：检测一系列元素中的重复项，可以使用哈希表来记录已经出现过的元素，以快速剔除重复元素。
+  
+## 实现细节
+
+哈希表的效率和性能在很大程度上取决于哈希函数的质量、冲突解决策略以及负载因子（Load factor）。
+
+- **哈希函数**：一个好的哈希函数应该能够将输入的关键字均匀分布到哈希桶中，降低冲突的可能性。
+- **冲突解决策略**：开放寻址法和链地址法都有其优缺点。开放寻址法在低负载下性能较好，但高负载下可能会出现聚集冲突；而链地址法则在冲突较多时性能可能更好，但对存储空间的使用比较浪费。
+
+哈希表是一种非常重要且广泛使用的数据结构，它可以提供高效的查找、插入和删除操作。通过选择合适的哈希函数和冲突解决策略，以及维持适当的负载因子，哈希表可以应对各种应用场景的需求。
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
