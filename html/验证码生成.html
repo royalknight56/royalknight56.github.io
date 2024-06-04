@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>验证码生成</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N5MM3G559R"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-N5MM3G559R');
+    </script>
+
+    <meta name="description" content="验证码（CAPTCHA）是一种用于区分人类和计算机的安全措施。它通过使用图形、数字或符号的组合来挑战用户输入，以验证其非机器身份。验证码的主要目的是防止自动"><meta name="keywords" content="验证码生成,图形验证码,短信验证码,电子邮件验证码,验证码软件,验证码服务,验证码API,码云验证码,站长验证码,源代码验证码">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./验证码生成.html">
+    验证码生成
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./图形验证码.html">
+    图形验证码
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./短信验证码.html">
+    短信验证码
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./电子邮件验证码.html">
+    电子邮件验证码
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./验证码软件.html">
+    验证码软件
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./验证码服务.html">
+    验证码服务
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./验证码API.html">
+    验证码API
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./码云验证码.html">
+    码云验证码
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./站长验证码.html">
+    站长验证码
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./源代码验证码.html">
+    源代码验证码
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>验证码生成</h1>
+                    验证码（CAPTCHA）是一种用于区分人类和计算机的安全措施。它通过使用图形、数字或符号的组合来挑战用户输入，以验证其非机器身份。验证码的主要目的是防止自动化攻击，如垃圾邮件发送、网络钓鱼或其他欺诈行为。
+
+在创建验证码时，需要考虑以下几个因素：
+
+1. 难度适中：过于简单的验证码可能被机器人识破，而过于复杂的验证码可能难以被人类理解。因此，验证码的难度应保持在一个合理的范围内，既能让机器学习程序识别，又能让人类用户轻松破解。
+
+2. 不要使用容易被猜到的信息：避免使用容易被猜到的信息，如生日、姓名、电话号码等。这些信息容易被自动化程序收集和分析，从而降低验证码的效果。
+
+3. 使用图形和数字组合：为了增加验证码的复杂性，可以使用图形和数字的组合。这可以使得机器学习程序更难识别，同时也能提高验证码的可识别性。
+
+4. 避免使用相同的验证码：为了避免重复使用相同的验证码，可以设计一个动态变化的验证码系统。每次请求新的验证码时，都生成一个新的验证码，以防止被机器人追踪和记录。
+
+5. 提供清晰的指示：为了让用户更容易地识别和输入验证码，可以在验证码旁边提供清晰的指示。例如，可以提示用户“输入字母A，然后是数字2”。
+
+6. 使用简化的字体：为了提高验证码的可识别性，可以选择使用简化的字体。过长的字符串或复杂的字形可能会增加机器学习程序的识别难度。
+
+7. 适当设置图片大小和分辨率：为了确保验证码在不同设备和屏幕尺寸上都能清晰显示，需要合理设置图片的大小和分辨率。过大的图片可能会导致加载失败或识别困难，而过小的图片可能会被机器人轻易忽略。
+
+总之，在设计验证码时，需要综合考虑难度、可识别性、安全性等因素，以提高验证码的效果和使用体验。
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

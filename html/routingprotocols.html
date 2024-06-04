@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>routingprotocols</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N5MM3G559R"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-N5MM3G559R');
+    </script>
+
+    <meta name="description" content="第2章主要介绍了在计算机网络中的路由协议。路由协议是网络中用于决定数据包传输路径的协议，它使得数据包能够从源主机传输到目标主机，跨越不同的网络。
+
+1. *"><meta name="keywords" content="路由协议,TCP/IP,HTTPS,FTP,DNS,VPN,DHCP,NAT,ICMP,ARP">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./路由协议.html">
+    路由协议
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./TCP/IP.html">
+    TCP/IP
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./HTTPS.html">
+    HTTPS
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./FTP.html">
+    FTP
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./DNS.html">
+    DNS
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./VPN.html">
+    VPN
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./DHCP.html">
+    DHCP
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./NAT.html">
+    NAT
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./ICMP.html">
+    ICMP
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./ARP.html">
+    ARP
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>routingprotocols</h1>
+                    第2章主要介绍了在计算机网络中的路由协议。路由协议是网络中用于决定数据包传输路径的协议，它使得数据包能够从源主机传输到目标主机，跨越不同的网络。
+
+1. **静态路由与动态路由**：静态路由是由网络管理员手动配置的，而动态路由则是通过路由协议自动学习和更新的。动态路由协议能够根据实时的网络状态为用户提供更好的路由选择。
+
+2. **路由协议类型**：常见的路由协议有RIP、IGRP、EIGRP（Enhanced Interior Gateway Routing Protocol）、OSPF（Open Shortest Path First）和BGP（Border Gateway Protocol）。每种协议都有其特定的机制和工作原理。
+
+3. **距离矢量路由协议**：这类协议（如RIP和IGRP）使用跳数作为衡量网络距离的标准。跳数指的是数据包在到达目的地之前必须经过的网络设备的数量，跳数越少，路由越佳。
+
+4. **链路状态路由协议**：链路状态协议（如OSPF和EIGRP）通过网络中的链路状态来计算最佳路径。这些协议要求每个路由器都了解网络的全貌，并维护一张包含网络中所有路由器的拓扑表。
+
+5. **自治系统（AS）**：自治系统是一个由单个管理机构管理的IP地址范围。BGP协议主要用于在不同的AS之间交换路由信息。
+
+6. **路由环路问题**：虽然路由协议为我们提供了高效的路由选择，但它们也可能导致路由环路的问题。路由环路会导致数据包在同一网络内无限循环，最终造成网络拥塞。为了解决这个问题，路由协议通常会使用一系列机制，如抑制计时器和触发更新等。
+
+7. **路由协议的选择**：在实际应用中，选择合适的路由协议需要考虑网络的规模、复杂性、所需的带宽以及管理员的经验等因素。
+
+8. **路由协议的安全性问题**：随着网络攻击的日益猖獗，路由协议的安全性问题也引起了人们的关注。因此，在选择和使用路由协议时，必须考虑其安全性，采取相应的安全措施。
+
+9. **IPv4与IPv6路由协议**：随着Internet的飞速发展，IPv4地址已经枯竭，IPv6应运而生，为全球范围内的数据通信提供了更多的地址空间。IPv6的设计目标是实现更大的地址空间、更快速且更有效的路由。
+
+10. **虚拟专用网（VPN）和路由协议**：VPN技术通过在公共网络上建立专用的加密通道，使得远程用户可以安全地访问公司的内部网络资源。这种技术可以与多种路由协议结合使用，为VPN用户提供更加稳定和安全的路由服务。
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>certificatepinning</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N5MM3G559R"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-N5MM3G559R');
+    </script>
+
+    <meta name="description" content="Certificate Pinning is a security measure used to protect API security protoco"><meta name="keywords" content="证书pinning,SSL/TLS,HTTPS,公钥基础设施,PFX,证书颁发机构,信任根,交叉证书,证书链,无效证书,独占根,全球信任,自签名证书,星号认证,预防性证书绑定,中间人攻击">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./证书pinning.html">
+    证书pinning
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./SSL/TLS.html">
+    SSL/TLS
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./HTTPS.html">
+    HTTPS
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./公钥基础设施.html">
+    公钥基础设施
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./PFX.html">
+    PFX
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./证书颁发机构.html">
+    证书颁发机构
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./信任根.html">
+    信任根
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./交叉证书.html">
+    交叉证书
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./证书链.html">
+    证书链
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./无效证书.html">
+    无效证书
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./独占根.html">
+    独占根
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./全球信任.html">
+    全球信任
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./自签名证书.html">
+    自签名证书
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./星号认证.html">
+    星号认证
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./预防性证书绑定.html">
+    预防性证书绑定
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./中间人攻击.html">
+    中间人攻击
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>certificatepinning</h1>
+                    Certificate Pinning is a security measure used to protect API security protocols. It involves the use of a unique digital identifier, known as a certificate pin, that is embedded in the application or client software. The purpose of certificate pinning is to verify the identity of the remote party (例如服务器）and ensure that the communication is not intercepted and tampered with by a third party.
+
+When a client connects to a server over a secure HTTP connection (HTTPS), the server presents its certificate, which contains the public key and other identification details. The client then Verify the certificate pin embedded in the application against the list of trusted certificates maintained by the server. If the证书 pin matches one of the trusted certificates, the client establishes a secure connection with the server. If the pin does not match, the client拒绝了与服务器的连接 Attempt.
+
+The main advantage of using certificate pinning is that it prevents man-in-the-middle attacks, where a third party intercepts the communication between the client and server and presents a forged certificate. Since the server only accepts pins that are present in the trusted certificate store, any attempt to present a forged certificate will be rejected, thus protecting the authenticity of the communication.
+
+Certificate pinning also provides forward secrecy, which means that even if an attacker intercepts the communication between the client and server and manages to tamper with the certificate, they will not be able to decrypt the encrypted data because they do not have the private key. This is because the private key is not stored on the client or server, but rather derived from the certificate pin during the initial authentication process.
+
+It's important to note that certificate pinning has some limitations. For example, it requires a list of trusted certificates to be maintained on the server, which can be a potential security risk. If the list of trusted certificates is not kept up to date, it can result in security vulnerabilities, as new threats may emerge that the server Does not recognize.
+
+另外，证书固定要求在服务器上维护一个受信任的证书列表，这可能存在潜在的安全风险。如果跟踪受信任证书列表不更新，则可能导致安全漏洞，因为可能存在服务器无法识别的新威胁。
+
+因此，使用证书固定时需要谨慎，并对其进行适当的管理和审计。开发者 should typically implement certificate pinning in their applications and ensure that the list of trusted certificates is kept current to mitigate these risks.
+
+总之，证书固定是一种重要的API安全措施，可以保护通信免受中间人攻击和数据篡改。 By verifying the digital identity of the remote party and ensuring that the communication is encrypted with a unique pin, developers can establish a secure and reliable connection with their servers. However，开发者 should carefully consider the potential security risks associated with certificate pinning and take steps to mitigate them to ensure the security of their applications.
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
