@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>传输协议</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N5MM3G559R"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-N5MM3G559R');
+    </script>
+
+    <meta name="description" content="传输协议，也被称为传输协议或通信协议，是在数据传输过程中用于确保不同计算机系统之间准确、高效地交换数据的规则和约定。这些协议涵盖了多个层面，包括物理层、数据"><meta name="keywords" content="传输协议,TCP/IP,HTTP,HTTPS,FTP,SMS,MMS,Email,DNS,DHCP,VPN,RTP,RTSP,RTMP,WebSocket">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./传输协议.html">
+    传输协议
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./TCP/IP.html">
+    TCP/IP
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./HTTP.html">
+    HTTP
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./HTTPS.html">
+    HTTPS
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./FTP.html">
+    FTP
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./SMS.html">
+    SMS
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./MMS.html">
+    MMS
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./Email.html">
+    Email
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./DNS.html">
+    DNS
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./DHCP.html">
+    DHCP
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./VPN.html">
+    VPN
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./RTP.html">
+    RTP
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./RTSP.html">
+    RTSP
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./RTMP.html">
+    RTMP
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./WebSocket.html">
+    WebSocket
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>传输协议</h1>
+                    传输协议，也被称为传输协议或通信协议，是在数据传输过程中用于确保不同计算机系统之间准确、高效地交换数据的规则和约定。这些协议涵盖了多个层面，包括物理层、数据链路层、网络层、传输层等，每一层都负责处理不同的传输细节，以确保信息的完整性和可靠性。
+
+在传输协议中，最关键的部分是传输控制协议（TCP），它提供了一种可靠的、面向连接的字节流服务。TCP协议位于网络协议栈的顶部，确保数据在传输过程中的顺序性和可靠性。通过顺序编号、数据分段、重传控制和拥塞控制等机制，TCP协议能够确保接收方正确地重新组装和解析发送方的数据，从而实现可靠的数据传输。
+
+此外，还有用户数据报协议（UDP），它是一种无连接的数据报传输协议。相比于TCP，UDP更加简单高效，因为它不关心数据是否已经正确传输，也不处理传输过程中的错误。因此，UDP协议适用于那些对实时性要求高、可以容忍一定数据丢失的应用场景，如实时视频、在线游戏等。
+
+传输协议的选择对于确保数据传输的效率和准确性至关重要。不同的应用场景和需求需要不同的传输协议来支持。例如，对于需要长距离传输和高可靠性的应用程序，可能会选择使用TCP协议；而对于那些对实时性要求高、可以接受少量数据丢失的应用程序，则可能会选择使用UDP协议。
+
+总之，传输协议是确保数据在不同计算机系统之间准确、高效地交换的关键技术。通过理解和比较不同的传输协议，我们可以选择最适合自己应用场景的协议，从而确保数据传输的高效性和可靠性。同时，随着技术的不断发展，新的传输协议也在不断涌现，以满足日益复杂的网络应用需求。
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N5MM3G559R"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-N5MM3G559R');
+    </script>
+
+    <meta name="description" content="表单（Form）是网页编程中一个重要的元素，主要负责获取用户输入的数据。表单出现在HTML文档中，最常见的作用是提交用户信息至网站服务器。表单一般包括输入框"><meta name="keywords" content="form,input,fields,elements,validation,submission,formdata,browser,HTTP,REST,HTML,CSS">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./form.html">
+    form
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./input.html">
+    input
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./fields.html">
+    fields
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./elements.html">
+    elements
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./validation.html">
+    validation
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./submission.html">
+    submission
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./formdata.html">
+    formdata
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./browser.html">
+    browser
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./HTTP.html">
+    HTTP
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./REST.html">
+    REST
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./HTML.html">
+    HTML
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./CSS.html">
+    CSS
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>form</h1>
+                    表单（Form）是网页编程中一个重要的元素，主要负责获取用户输入的数据。表单出现在HTML文档中，最常见的作用是提交用户信息至网站服务器。表单一般包括输入框（text input）、下拉选择框（drop-down menu）、单选按钮（radio button）、复选框（checkbox）等。用户填写的信息通过提交按钮提交到服务器，进行处理和存储。
+
+表单的基本结构如下：
+
+```html
+
+<form action="/submit" method="POST">
+
+  <!-- 输入框 -->
+
+ <label for="username">用户名：</label>
+
+ <input type="text" id="username" name="username">
+
+  <!-- 下拉选择框 -->
+
+ <label for="gender">性别：</label>
+
+ <select id="gender" name="gender">
+
+   <option value="male">男</option>
+
+   <option value="female">女</option>
+
+  </select>
+
+  <!-- 单选按钮 -->
+
+ <label for="hobby">爱好：</label>
+
+ <input type="checkbox" id="hobby1" name="hobby" value="reading">
+
+ <input type="checkbox" id="hobby2" name="hobby" value="traveling">
+
+  <!-- 复选框 -->
+
+ <label for="music">音乐偏好：</label>
+
+ <input type="checkbox" id="music1" name="music" value="pop">
+
+ <input type="checkbox" id="music2" name="music" value="rock">
+
+  <!-- 提交按钮 -->
+
+ <input type="submit" value="提交">
+
+</form>
+
+```
+
+在这个例子中，表单包含了一个用户名输入框、一个性别选择框、两个爱好选项以及一个提交按钮。其中，`action` 属性指定了提交表单数据的目的地，`method` 属性定义了数据提交的方式，通常为 "POST" 或 "GET"。
+
+不同类型的表单输入元素具有不同的`type`属性值。例如：
+
+- `text`：文本输入框，用于输入字符串类型的数据。
+- `password`：密码输入框，用于输入加密后的字符串类型的数据。
+- `radio`：单选按钮，一组选择框中只能选择一个选项。
+- `checkbox`：复选框，一组选择框中可以同时选择多个选项。
+- `range`：数值选择框，用于选择一定范围内的数值。
+- `color`：颜色选择框，用于选择颜色值。
+
+在HTML文档中创建表单后，用户可以通过点击提交按钮将填写的信息发送到服务器进行处理。为了确保表单数据的安全和保密，通常需要使用验证码、字符限制等方法来降低恶意攻击的可能性。
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAT</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N5MM3G559R"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-N5MM3G559R');
+    </script>
+
+    <meta name="description" content="Network Address Translation (NAT) 是一种将私有（非注册）IP地址转换为公共（注册）IP地址的技术，以防止本地网络中的设备在"><meta name="keywords" content="NAT,网络地址转换,转换,地址,网络,兼容,端口,访问控制,隧道,路由,硬件,软件,NAT设备,接入,分组,网络访问,公共网络.">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./NAT.html">
+    NAT
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./网络地址转换.html">
+    网络地址转换
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./转换.html">
+    转换
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./地址.html">
+    地址
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./网络.html">
+    网络
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./兼容.html">
+    兼容
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./端口.html">
+    端口
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./访问控制.html">
+    访问控制
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./隧道.html">
+    隧道
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./路由.html">
+    路由
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./硬件.html">
+    硬件
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./软件.html">
+    软件
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./NAT设备.html">
+    NAT设备
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./接入.html">
+    接入
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./分组.html">
+    分组
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./网络访问.html">
+    网络访问
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./公共网络..html">
+    公共网络.
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>NAT</h1>
+                    Network Address Translation (NAT) 是一种将私有（非注册）IP地址转换为公共（注册）IP地址的技术，以防止本地网络中的设备在互联网上发送和接收数据时暴露其真实IP地址。NAT通常用于家庭和企业网络中，以允许单个网络上的多个设备共享一个公共IP地址。
+
+### NAT的工作原理
+
+NAT工作在数据包离开或进入私有网络时。在数据包离开时，NAT设备会更改该数据包的目标IP地址，将其替换为公共IP地址。这使得私有网络设备可以访问互联网，而无需为每个设备分配唯一的公共IP地址。在数据包进入时，NAT设备会对源IP地址进行类似的处理，从而隐藏内部网络的详细信息。
+
+### NAT的类型
+
+根据NAT的工作方式，NAT可以分为以下几种类型：
+
+1. **静态NAT**：在静态NAT中，每个私有IP地址都唯一地映射到一个公共IP地址。这种类型通常用于需要固定公共IP地址的应用场景，如视频会议系统。
+
+2. **动态NAT**：动态NAT允许一组共享相同公共IP地址的私有IP地址在需要时进行转换。当一个私有IP地址需要使用公共资源时，NAT设备会为其分配一个临时的公共IP地址。这种类型在临时连接或池模式中非常有用。
+
+3. **端口地址转换（PAT）**：端口地址转换是一种NAT变体，它允许多个内部网络设备共享一个公共IP地址，并通过端口号来区分它们。这使得内部网络设备可以使用相同的公共IP地址访问互联网。
+
+### NAT的优缺点
+
+NAT具有以下优点：
+
+* 节省了宝贵的公共IP地址资源，尤其是在大型企业或网络服务提供商（ISP）的场景中。
+* 提供了一定程度的安全性，因为内部网络设备不能直接从互联网发起连接。
+* 支持多台设备的共享接入互联网。
+
+然而，NAT也存在一些缺点：
+
+* 端口地址转换可能导致延迟，因为每个设备都需要通过一个唯一的端口来访问互联网。
+* 对于某些需要精确端到端连接的特殊应用（如VoIP），NAT可能会引入额外的延迟和处理开销。
+* NAT配置和管理可能相对复杂，尤其是对于大型或复杂的网络环境。
+
+### NAT的实现方式
+
+NAT可以通过多种方式实现，包括硬件设备、软件路由器或软件客户端等。在家庭和企业网络中，路由器通常集成了NAT功能，用户无需额外购买和配置NAT设备。在某些情况下，也可以通过网络地址转换和代理服务器等技术来实现NAT功能。
+
+总之，网络地址转换（NAT）是一种重要的网络技术，它允许将私有IP地址转换为公共IP地址，从而保护内部网络的隐私和安全。NAT类型多样，可以根据不同的需求选择合适的实现方式。然而，NAT也存在一些缺点，需要在实际应用中进行权衡和选择。
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

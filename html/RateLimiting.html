@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RateLimiting</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N5MM3G559R"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-N5MM3G559R');
+    </script>
+
+    <meta name="description" content="rate limiting，也被称为速率限制或流量控制，是一种用于保护服务器和网络免受大量请求或数据流影响的策略。这种策略通过限制单个用户或客户端在特定时间"><meta name="keywords" content="RateLimiting,API,request,frequency,limit,bandwidth,usage,server,client,APIkey,security,performance,restriction,threshold.">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./RateLimiting.html">
+    RateLimiting
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./API.html">
+    API
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./request.html">
+    request
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./frequency.html">
+    frequency
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./limit.html">
+    limit
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./bandwidth.html">
+    bandwidth
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./usage.html">
+    usage
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./server.html">
+    server
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./client.html">
+    client
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./APIkey.html">
+    APIkey
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./security.html">
+    security
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./performance.html">
+    performance
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./restriction.html">
+    restriction
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./threshold..html">
+    threshold.
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>RateLimiting</h1>
+                    rate limiting，也被称为速率限制或流量控制，是一种用于保护服务器和网络免受大量请求或数据流影响的策略。这种策略通过限制单个用户或客户端在特定时间段内可以发送或接收的数据量来实现这一目标。速率限制可以应用于各种场景，如网络请求、数据库查询、API调用等。
+
+实施速率限制的目的主要有两个：一是防止资源过载，二是防止滥用。当服务器接收到过多的请求时，它可能会崩溃或响应变慢，从而影响用户体验。通过限制速率，可以确保服务器不会被这些恶意请求压垮，同时也可以防止合法用户的请求被延迟。速率限制还可以防止对敏感资源的滥用，例如，限制每个用户在一天内可以发送多少封电子邮件，从而防止垃圾邮件。
+
+速率限制可以通过多种方式实现。一种常见的方式是使用令牌桶算法。令牌桶算法是一种基于时间的算法，它以固定的速率向令牌桶中添加令牌。当有新的请求到来时，它会检查令牌桶中是否有足够的令牌可以使用。如果有，请求将被允许通过；如果没有，请求将被延迟并计入速率限制。通过调整令牌的产生速率，可以控制每个用户或客户端的速率限制。
+
+另一种实现速率限制的方式是使用漏桶算法。漏桶算法是一种基于量的算法，它以固定的速率向漏桶中添加令牌，直到桶中的令牌量达到一个固定值为止。当有新的请求到来时，它会检查漏桶中有多少令牌可以使用。如果有，请求将被允许通过；如果没有，请求将被延迟并计入速率限制。通过调整漏桶的大小，可以控制每个用户或客户端的速率限制。
+
+速率限制可以应用于各种不同的场景。例如，在网络请求中，可以限制每个IP地址在一定时间内的请求数量，以防止DDoS攻击。在数据库查询中，可以限制每个用户的查询频率，以防止数据库过载。在API调用中，可以限制每个用户的请求速率，以防止API被滥用。此外，速率限制还可以用于许多其他场景，如HTTP缓存、内容分发网络（CDN）等。
+
+尽管速率限制可以提供有效的保护措施，但它也可能会引入一些问题。例如，如果由于某些原因导致速率限制被违反，用户可能会受到影响。这可能会导致服务不稳定或质量下降。因此，在实施速率限制时，需要仔细考虑其影响，并采取适当的措施来减轻这些问题。例如，可以提供一些备用方案，以应对由于速率限制导致的请求丢失或延迟等问题。此外，还可以定期检查和调整速率限制的设置，以确保它们仍然适用于特定的应用场景和需求。
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tar</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N5MM3G559R"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-N5MM3G559R');
+    </script>
+
+    <meta name="description" content="# tar 命令
+
+`tar` 是一个在 Unix 和类 Unix 操作系统上常用的文件归档工具。它主要用于创建和处理文件和目录的归档文件。归档文件通常用于"><meta name="keywords" content="tar,文件压缩,归档,列表,解压缩,Unix,Linux,程序,Windows,打包,解包,文件,包含,隐藏文件.">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./tar.html">
+    tar
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./文件压缩.html">
+    文件压缩
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./归档.html">
+    归档
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./列表.html">
+    列表
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./解压缩.html">
+    解压缩
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./Unix.html">
+    Unix
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./Linux.html">
+    Linux
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./程序.html">
+    程序
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./Windows.html">
+    Windows
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./打包.html">
+    打包
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./解包.html">
+    解包
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./文件.html">
+    文件
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./包含.html">
+    包含
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./隐藏文件..html">
+    隐藏文件.
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>tar</h1>
+                    # tar 命令
+
+`tar` 是一个在 Unix 和类 Unix 操作系统上常用的文件归档工具。它主要用于创建和处理文件和目录的归档文件。归档文件通常用于备份、分享和压缩文件。
+
+## 用途
+
+- **创建归档文件**：使用 `tar` 命令可以将多个文件和目录组合成一个归档文件。
+- **解压缩归档文件**：`tar` 还可以用于从归档文件中提取文件和目录。
+- **查找归档文件中的文件**：可以使用 `-r` 选项来递归地查询归档文件中的所有文件。
+- **更新归档文件**：如果归档文件已存在，并且您希望只添加或修改某些文件，可以使用 `-u` 选项（有时称为“更新”或“追加”）。
+- **同时处理多个文件**：可以在命令行中使用多个 `--file` 选项来同时处理多个归档文件。
+- **创建.tar 归档文件**：默认情况下，`tar` 创建 .tar 归档文件。如果需要，可以通过添加 `.gz` 或 `.bz2` 扩展名来创建压缩的归档文件。
+
+## 选项
+
+- `-c`：创建新的归档文件。
+- `-x`：从归档文件中提取文件。
+- `-t`：列出归档文件中的文件。
+- `-r`：添加（追加）到归档文件中的文件。
+- `-u`：更新（追加）归档文件中已存在的文件。
+- `-v`：详细输出，显示正在处理的文件。
+- `-z`：使用 gzip 压缩，创建 .gz 归档文件。
+- `-J`：使用 bzip2 压缩，创建 .bz2 归档文件。
+- `-O`：将文件从归档文件中提取到指定的文件中。
+
+## 示例
+
+### 创建一个新归档文件
+
+```bash
+tar -cvf archive.tar files_to_add/
+```
+
+这个命令将创建一个名为 "archive.tar" 的归档文件，并将 "files_to_add/" 目录中的所有文件和目录添加到该归档文件中。
+
+### 解压缩归档文件到一个目录
+
+```bash
+tar -xvf archive.tar -C destination_directory/
+```
+
+这个命令将从 "archive.tar" 中提取所有文件，并将它们解压缩到 "destination_directory/" 目录中。
+
+### 列出归档文件中的所有文件
+
+```bash
+tar -tf archive.tar
+```
+
+这个命令列出 "archive.tar" 归档文件中的所有文件和目录。
+
+以上就是关于 `tar` 命令的基本用法和示例。这个工具在 Unix 和类 Unix 系统中非常常见，因此对于学习和使用这些操作系统的用户来说，掌握 `tar` 命令是非常有用的。
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

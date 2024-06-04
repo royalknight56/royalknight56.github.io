@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node.js</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N5MM3G559R"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-N5MM3G559R');
+    </script>
+
+    <meta name="description" content="Node.js是一个基于Chrome V8引擎的JavaScript运行环境。它采用了事件驱动、非阻塞I/O模型，使得它轻量、高效且适合处理高并发的场景。N"><meta name="keywords" content="Node.js,JavaScript,npm,Express,WebSocket,cluster,promises,async/await,fileSystem,buffers,streams,http,request,url,querystring,mysql,mongodb,ORM,authentication,authorization,rates,leadership,communities">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./Node.js.html">
+    Node.js
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./JavaScript.html">
+    JavaScript
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./npm.html">
+    npm
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./Express.html">
+    Express
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./WebSocket.html">
+    WebSocket
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./cluster.html">
+    cluster
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./promises.html">
+    promises
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./async/await.html">
+    async/await
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./fileSystem.html">
+    fileSystem
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./buffers.html">
+    buffers
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./streams.html">
+    streams
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./http.html">
+    http
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./request.html">
+    request
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./url.html">
+    url
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./querystring.html">
+    querystring
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./mysql.html">
+    mysql
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./mongodb.html">
+    mongodb
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./ORM.html">
+    ORM
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./authentication.html">
+    authentication
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./authorization.html">
+    authorization
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./rates.html">
+    rates
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./leadership.html">
+    leadership
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./communities.html">
+    communities
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>Node.js</h1>
+                    Node.js是一个基于Chrome V8引擎的JavaScript运行环境。它采用了事件驱动、非阻塞I/O模型，使得它轻量、高效且适合处理高并发的场景。Node.js的应用范围非常广泛，包括数据存储、在线聊天、社交媒体平台、电子商务、游戏服务器等。
+
+Node.js的优势是其非阻塞I/O模型，它可以极大地提高服务器的性能。此外，Node.js使用JavaScript作为开发语言，这样前端和后端可以使用相同的语言，为全栈开发提供了很大的便利。
+
+Node.js也有一些缺点。首先，它的性能虽然优于传统的PHP脚本，但与Java、Python等成熟的编程语言相比，仍然有一定的差距。其次，Node.js过于依赖npm包管理器，这可能导致项目维护不便。
+
+尽管存在一些缺点，但Node.js的流行度和社区活跃度都非常高。随着不断有新的模块和工具的开发，Node.js的使用者可以享受到越来越丰富的资源和便捷的服务。
+
+在Node.js中，最主要的模块是Express框架。Express是一个简洁、灵活的Node.js网络应用框架，它提供了丰富的API，可以快速地构建出各种Web应用。使用Express，我们可以方便地实现路由、中间件、数据验证等功能。
+
+除了Express之外，还有许多其他的Node.js模块，如Koa、Fastify、Socket.IO等。这些模块各有特点，可以根据具体的应用场景选择合适的模块。
+
+总的来说，Node.js是一个非常优秀的开发框架，它以其高性能、便捷性和丰富的生态系统，成为了现代Web开发中不可或缺的一部分。无论是前端还是后端，Node.js都能提供强大的支持，帮助开发者快速构建出高效、稳定的应用。
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

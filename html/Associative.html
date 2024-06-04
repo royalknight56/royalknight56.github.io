@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Associative</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N5MM3G559R"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-N5MM3G559R');
+    </script>
+
+    <meta name="description" content="Associative arrays, also known as hash tables or dictionaries, are a powerful "><meta name="keywords" content="Associative,memory,learning,concept,association,brain,neural,processing,connection,information,storage,retention.">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./Associative.html">
+    Associative
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./memory.html">
+    memory
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./learning.html">
+    learning
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./concept.html">
+    concept
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./association.html">
+    association
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./brain.html">
+    brain
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./neural.html">
+    neural
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./processing.html">
+    processing
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./connection.html">
+    connection
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./information.html">
+    information
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./storage.html">
+    storage
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./retention..html">
+    retention.
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>Associative</h1>
+                    Associative arrays, also known as hash tables or dictionaries, are a powerful data structure that allow you to store and retrieve values associated with a unique key. They're similar to arrays, but instead of using indices to access elements, you use keys, which can be of any data type, including strings, numbers, or even objects.
+
+The key advantage of associative arrays is their ability to efficiently map keys to values, making it possible to quickly retrieve values by their corresponding keys. This makes them an essential tool for tasks where quick access to data is necessary, such as in databases, configurations, and caches.
+
+In this article, we'll explore the basics of associative arrays, including how they're implemented, the different types of associations, and some common use cases. We'll also discuss some advanced topics, such as collision resolution techniques and performance considerations.
+
+So, let's get started!
+
+How Are Associative Arrays Implemented?
+
+Implementing associative arrays depends on the programming language and the underlying data structure used. In most cases, associative arrays are implemented using hash tables, which use encryption techniques to convert keys into array indices. These indices then point to the corresponding values in the array.
+
+Here's a simple example of how you might implement an associative array in Python using a dictionary:
+
+```
+# Create a new dictionary
+my_dict = {}
+
+# Add key-value pairs
+my_dict['apple'] = 1
+my_dict['banana'] = 2
+my_dict['cherry'] = 3
+
+# Retrieve a value by its key
+print(my_dict['banana'])  # Output: 2
+```
+
+As you can see, creating and manipulating associative arrays is relatively straightforward once you understand the basic concepts. In the next section, we'll explore the different types of associations and their use cases.
+
+What Are the Different Types of Associations?
+
+Associative arrays can be used to represent a variety of relationships between values. Here are some of the most common types of associations:
+
+1. Finite Key sets: As we saw in the previous example, the keys in an associative array are typically finite strings or numbers. Each key corresponds to a unique value, and you can retrieve the value by its corresponding key.
+
+2. Keys with Multiples Values: Some associative arrays allow multiple values to be associated with a single key. This is useful when you need to represent a many-to-many relationship between values. For example, you might use a key to represent a user's name, and the corresponding values could be a list of the user's email addresses.
+
+3. Orderings: Associative arrays can also be used to store ordered lists. For example, you might use a key to represent a country, and the corresponding values could be a list of the country's capital cities, sorted in alphabetical order.
+
+4. Groups: In some cases, you might want to group values together based on a specific characteristic. For example, you might use a key to represent a person's age group, and the corresponding values could be a list of people within that age group.
+
+What Are Some Common Use Cases for Associative Arrays?
+
+Associative arrays are incredibly versatile and can be used in a wide range of applications. Here are some common use cases for associative arrays:
+
+1. Caching: One of the most common use cases for associative arrays is caching. You can use an associative array to store frequently accessed data, such as web pages or API responses, to reduce the time it takes to load them.
+
+2. Databases: Most traditional databases use associative arrays (i.e., hash tables) to store data. The primary purpose of a database is to store and retrieve data, and associative arrays provide an efficient way to achieve this.
+
+3. Configuration Files: Associative arrays can be used to represent configuration files, where keys correspond to configuration options, and the corresponding values are the option's value. This makes it easy to modify and extend the configuration without having to rewrite the entire file.
+
+4. Associative Arrays as Function Arguments: When writing function decorators or higher-order functions, it's often useful to pass an associative array as an argument. This allows you to easily loop over the keys and values of the array within the function.
+
+5. Object Representation: In object-oriented programming, objects are often implemented as associative arrays. Each key represents a property of the object, and the corresponding value is the property's value.
+
+Collision Resolution Techniques
+
+As the number of keys in an associative array increases, the likelihood of collisions (i.e., two different keys mapping to the same value) also increases. To address this issue, several collision resolution techniques can be used:
+
+1. Chaining: When a collision occurs, the algorithm stores the new value at the end of the chain associated with the original key. This approach is simple but limits the performance of the array as the chain grows.
+
+2. Linear Probing: Linear probing is a simple yet efficient collision resolution technique. When a collision occurs, the algorithm incrementally searches for the next available slot in the array until it finds an open slot. This approach minimizes the number of comparisons required to find the next available slot but can lead to poor performance when the array becomes very full.
+
+3. Quadratic Probing: Quadratic probing is a more complex collision resolution technique that attempts to find an open slot by searching in a wider range of slots. It uses a quadratic polynomial function to calculate the next slot position, starting with the initial hash position.
+
+4. Resizing: Another way to handle collisions is to automatically resize the array when the load factor (i.e., the ratio of the number of keys to the total number of slots) exceeds a certain threshold. This allows the array to maintain optimal performance as the number of keys increases.
+
+Performance Considerations
+
+When working with large associative arrays, it's important to consider performance factors such as time complexity and space complexity. The average case time complexity for retrieval, insert, and delete operations on an associative array is typically O(1), meaning that they take a constant amount of time, assuming a good hash function and a well-distributed set of keys. However, in practice, the actual performance of an associative array can be affected by factors such as hash function quality, the density of the keys in the array, and the use of collision resolution techniques.
+
+Space Complexity: The space complexity of an associative array is typically O(n), where n is the number of keys in the array. This is because each key requires memory to store, regardless of the size of the array.
+
+Conclusion
+
+营利法人にある取引の成立において、会社がその目的を達成するために必要な行為を行う義務があることは、一般的な原則として認識されています。これには、会社が取引の当事者であること、会社がその取引の相手方と同意し、事業内容を承認することが含まれます。一方で、会社が取引の成立過程で行う行為が、その目的を達成するために必要な範囲内であることも重要です。したがって、会社が取引の成立において行う行為は、その目的を達成するために必要な行為の一部であり、それ自身が取引の成立の要件であるべきではありません。
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

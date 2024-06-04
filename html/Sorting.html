@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N5MM3G559R"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-N5MM3G559R');
+    </script>
+
+    <meta name="description" content="Sorting is a fundamental operation in computing and data processing, and it is"><meta name="keywords" content="排序,有序,数据,列表,链表,排序算法,比较,索引,优化,归并排序,快速排序,堆排序">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./排序.html">
+    排序
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./有序.html">
+    有序
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./数据.html">
+    数据
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./列表.html">
+    列表
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./链表.html">
+    链表
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./排序算法.html">
+    排序算法
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./比较.html">
+    比较
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./索引.html">
+    索引
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./优化.html">
+    优化
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./归并排序.html">
+    归并排序
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./快速排序.html">
+    快速排序
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./堆排序.html">
+    堆排序
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>Sorting</h1>
+                    Sorting is a fundamental operation in computing and data processing, and it is also one of the most commonly used operations. Various algorithms and techniques have been proposed for sorting, each with its own advantages and disadvantages. In this article, we will discuss the basic concepts, types, and algorithms of sorting, as well as their applications in real life.
+
+一、基本概念
+
+排序是指将一组数据元素按照一定的顺序进行排列，使得相同的数据元素具有相同的顺序，不同的数据元素之间具有不同的顺序。排序是计算机科学中的基本问题，也是算法设计中的重要课题。常见的排序方法有：冒泡排序、选择排序、插入排序、快速排序、归并排序、计数排序、基数排序等。这些排序方法各有优缺点，适用于不同的场景和数据类型。
+
+二、基本类型
+
+1. 冒泡排序：冒泡排序是一种简单的排序算法，它重复地遍历要排序的数列，一次比较两个元素，如果捆绑的顺序错误就把它们交换过来。遍历数列的工作是重复地进行直到没有再需要交换，即数列已经排序完成。这个算法的名字由来是因为越小的元素会经由交换慢慢“浮”到数列的顶端。
+
+2. 选择排序：选择排序是一种简单直观的不稳定排序算法。它的工作原理是每一次从待排序的数据元素中选出最小（或最大）的一个元素，存放在序列的起始位置，直到全部待排序的数据元素排完。选择排序是不稳定的排序方法，因为对于相等的元素，可能会因为他们的原始位置而被选中。
+
+3. 插入排序：插入排序是一种简单直观的不稳定排序算法。它的工作原理是通过构建有序序列，对于未排序数据，在已排序序列中从后向前扫描，找到相应位置并插入。插入排序在实现上，通常采用in-place排序（即只需用到O(1)的额外空间的排序），因此在从后向前扫描过程中，找到排序位置后，相应的数据会一步步地移动，为最新数据腾出空间。
+
+4. 快速排序：快速排序使用分治思想来对一个序列进行排序。算法首先选取一个'基准值'（pivot），通过一趟排序将待排记录分隔成独立的两部分，其中一部分记录的关键字均比另一部分的关键字小。然后分别对这两部分记录继续进行排序，以达到整个序列有序。
+
+5. 归并排序: 归并排序是建立在归并操作上的一种有效的排序算法。该算法是采用分治法的一个非常典型的应用。归并排序是一种稳定的排序方法。将已有序的子序列合并，得到完全有序的序列；即先使每个子序列有序，再使子序列段间有序。若将两个有序表合并成一个有序表，称为2-路归并。
+
+三、算法性能分析
+
+上面介绍了几种常见的排序算法及其特点，这些算法各有优劣，适用于不同的场景。在实际应用中，需要根据数据的特性和需求选择合适的排序算法。一般来说，对于小规模的数据集，可以直接使用简单的排序算法，如冒泡排序、插入排序或选择排序。对于大规模的数据集，快速排序、归并排序或计数排序可能是更好的选择，因为它们的时间复杂度较低，可以更快地完成任务。
+
+四、实际应用场景
+
+排序在实际应用中有着广泛的应用场景。例如，在数据库管理中，为了提高查询效率，通常需要对查询结果进行排序。在网络爬虫中，为了更好地返回排序后的网页结果，也需要对抓取到的网页数据进行排序。此外，在日程管理、数据分析等领域，排序也都是不可或缺的基本操作。
+
+总结：本文介绍了排序的基本概念、类型和算法，并分析了它们的性能和应用场景。排序作为计算机科学中的基本问题之一，不仅在理论研究中具有重要意义，而且在实际应用中也发挥着重要作用。通过深入了解排序的理论和方法，我们可以更好地利用排序技术来处理和分析数据，从而为解决实际问题提供有力支持。
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

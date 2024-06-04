@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DHCP</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N5MM3G559R"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-N5MM3G559R');
+    </script>
+
+    <meta name="description" content="动态主机配置协议（DHCP）是一种用于自动分配IP地址的网络协议。它允许网络中的DHCP服务器为连接到网络的设备分配IP地址、子网掩码、默认网关和DNS服务"><meta name="keywords" content="DHCP,网络分配协议,自动地址分配,统一动态主机配置,IP地址租约,简易网络管理协议,网络接口卡,地址解析协议,网络地址转换,动态域名系统,管理界面,配置参数,网络管理工具.">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./DHCP.html">
+    DHCP
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./网络分配协议.html">
+    网络分配协议
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./自动地址分配.html">
+    自动地址分配
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./统一动态主机配置.html">
+    统一动态主机配置
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./IP地址租约.html">
+    IP地址租约
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./简易网络管理协议.html">
+    简易网络管理协议
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./网络接口卡.html">
+    网络接口卡
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./地址解析协议.html">
+    地址解析协议
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./网络地址转换.html">
+    网络地址转换
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./动态域名系统.html">
+    动态域名系统
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./管理界面.html">
+    管理界面
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./配置参数.html">
+    配置参数
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./网络管理工具..html">
+    网络管理工具.
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>DHCP</h1>
+                    动态主机配置协议（DHCP）是一种用于自动分配IP地址的网络协议。它允许网络中的DHCP服务器为连接到网络的设备分配IP地址、子网掩码、默认网关和DNS服务器等网络参数。DHCP的作用使得网络管理员能够轻松地管理大量设备的IP地址分配，而无需手动为每个设备分配IP地址。
+
+DHCP的工作过程分为两个阶段：租约请求和租约更新。首先，DHCP客户端从DHCP服务器请求一个IP地址。如果服务器有可用的IP地址，则将其分配给客户端，并在租约请求中发送该IP地址及相关配置信息给客户端。客户端接收这些信息后，使用这些设置连接到网络并开始运行。
+
+租约更新是DHCP客户端在租约期结束时向DHCP服务器请求续订租约的过程。如果服务器收到续订请求并在数据库中找到该客户的租约信息，则发送确认消息将租约延期。否则，客户端将被给予一个新的IP地址并重新启动其网络连接。
+
+DHCP的一个重要特性是它可以减少网络上的网络管理开销。由于DHCP服务器负责分配和管理IP地址，因此网络管理员可以更集中地管理网络，而不是花费大量时间手动分配IP地址。
+
+然而，DHCP也有一些缺点。例如，在大规模的网络中，DHCP服务器可能成为瓶颈，因为所有客户端都必须从同一个服务器请求IP地址。这可能导致DHCP服务器过载和延迟增加。此外，由于DHCP客户端不知道它们所在网络的子网掩码，因此它们必须通过其他方式获取该信息，例如通过DHCP服务器或具有知识的网络管理员。
+
+尽管存在这些缺点，DHCP仍然是一种广泛使用的IP地址分配协议，特别是在小型和中型网络中。它的易于使用性和对大型网络的良好适应性使其成为网络管理员的重要工具。
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

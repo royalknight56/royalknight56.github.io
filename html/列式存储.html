@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>列式存储</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N5MM3G559R"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-N5MM3G559R');
+    </script>
+
+    <meta name="description" content="列式存储（Columnar Storage）是一种数据存储方式，它将数据按照列进行组织和存储，与传统的行式存储（Row-based Storage）不同。在"><meta name="keywords" content="列式存储,数据库,列式数据库,表格存储,列族存储,分布式存储,键值存储,高性能计算,大数据处理">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./列式存储.html">
+    列式存储
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./数据库.html">
+    数据库
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./列式数据库.html">
+    列式数据库
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./表格存储.html">
+    表格存储
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./列族存储.html">
+    列族存储
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./分布式存储.html">
+    分布式存储
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./键值存储.html">
+    键值存储
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./高性能计算.html">
+    高性能计算
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./大数据处理.html">
+    大数据处理
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>列式存储</h1>
+                    列式存储（Columnar Storage）是一种数据存储方式，它将数据按照列进行组织和存储，与传统的行式存储（Row-based Storage）不同。在列式存储中，数据被分成多个列（列式数据库中的列式存储通常指的是索引），每个列都有自己的数据类型和存储空间。这种组织方式使得列式存储在处理某些特定类型的数据时更加高效。
+
+列式存储的优势：
+
+1. **节省存储空间**：由于数据是按照列进行组织的，因此相同的列数据会存储在同一块区域，这样可以减少不必要的存储空间浪费。同时，在查询过程中，只需要读取与查询相关的列，而不是整行数据，这也可以进一步节省存储空间。
+2. **提高查询性能**：列式存储可以加速某些类型的查询。例如，在数字营销领域，列式存储可以高效地对用户行为数据进行聚合查询，如计算用户点击量、页面浏览量等。此外，列式存储还可以通过压缩技术来减少数据的占用空间，进一步提高查询性能。
+3. **方便数据压缩**：列式存储可以将同一列的数据进行压缩，这是因为相同列中的数据往往具有相似的数据特征。通过压缩同一列的数据，可以减少数据的占用空间，提高存储效率。
+4. **支持不同的数据类型**：列式存储可以支持复杂的数据类型，如数组、结构体等。这些数据类型在传统的行式存储中可能会被分割成多个部分，导致存储空间的浪费和查询性能的下降。然而，在列式存储中，这些复杂的数据类型可以被统一存储和管理，从而提高数据的完整性和一致性。
+
+列式存储的应用场景：
+
+目前，列式存储已经被广泛应用于大数据处理、云计算、人工智能等领域。在大数据处理领域，列式存储可以处理PB级别的数据量，并且支持实时数据流的处理和分析。在云计算领域，列式存储可以作为分布式存储系统中的存储层，提供高效的数据读写能力和可扩展性。在人工智能领域，列式存储可以支持大规模机器学习模型的训练和推理过程，提高模型训练的速度和精度。
+
+总之，列式存储是一种高效的数据存储方式，它可以显著提高数据处理效率和存储效率。随着技术的不断发展，列式存储将在更多领域得到应用和推广。
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

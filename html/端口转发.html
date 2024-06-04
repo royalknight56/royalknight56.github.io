@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>端口转发</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N5MM3G559R"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-N5MM3G559R');
+    </script>
+
+    <meta name="description" content="端口转发（Port Forwarding）是一种网络配置，它允许外部计算机访问内部网络上的特定服务。端口转发的主要目的是在内部网络和外部网络之间创建一个安全"><meta name="keywords" content="端口转发,网络配置,防火墙设置,路由器设置,交换机设置,互联网连接,内部网络,外部网络,IP地址,子网掩码,DMZ,端口映射,URL过滤,网络安全,远程访问。">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./端口转发.html">
+    端口转发
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./网络配置.html">
+    网络配置
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./防火墙设置.html">
+    防火墙设置
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./路由器设置.html">
+    路由器设置
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./交换机设置.html">
+    交换机设置
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./互联网连接.html">
+    互联网连接
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./内部网络.html">
+    内部网络
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./外部网络.html">
+    外部网络
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./IP地址.html">
+    IP地址
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./子网掩码.html">
+    子网掩码
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./DMZ.html">
+    DMZ
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./端口映射.html">
+    端口映射
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./URL过滤.html">
+    URL过滤
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./网络安全.html">
+    网络安全
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./远程访问。.html">
+    远程访问。
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>端口转发</h1>
+                    端口转发（Port Forwarding）是一种网络配置，它允许外部计算机访问内部网络上的特定服务。端口转发的主要目的是在内部网络和外部网络之间创建一个安全通道，以便可以通过互联网对内部网络上的资源进行访问。
+
+在网络通信中，端口是一个非常重要的概念。端口是一个通信端点，用于识别运行在计算机上的特定进程和服务。端口号范围从0到65535，其中一些端口已被预定义，如HTTP（80）、HTTPS（443）等，用于指定特定的服务。
+
+当外部计算机试图访问内部网络上的服务时，通过端口转发的方法，可以将外部计算机的请求发送到内部网络上的指定主机，从而实现对内部网络的服务进行访问。
+
+端口转发的基本原理是通过路由器或防火墙将外部计算机发送的请求转发到内部网络，然后再由内部网络的服务器处理请求并将响应发送回外部计算机。在这个过程中，路由器或防火墙需要配置相应的规则来实现端口转发。
+
+在实际应用中，端口转发通常用于以下场合：
+
+1. VPN访问：通过端口转发，用户可以远程访问企业内部的网络资源，实现安全的远程办公。
+
+2. 内部网络服务：对于内部网络中的特定服务，如文件服务器、邮件服务器等，可以通过端口转发使其对外部计算机提供访问。
+
+3. Web服务器：对于Web服务器，端口转发可以用于将外部计算机的请求转发到Web服务器，从而实现对外部用户提供的网站服务。
+
+请注意，端口转发可能会导致安全风险，因为外部计算机可以直接访问内部网络上的服务。为了确保网络安全，建议仅将必要的端口转发配置为公开，同时加强访问控制和安全策略。
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

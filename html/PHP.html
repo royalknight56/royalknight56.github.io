@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N5MM3G559R"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-N5MM3G559R');
+    </script>
+
+    <meta name="description" content="PHP（Hypertext Preprocessor，超文本预处理器）是一种广泛使用的通用编程语言，尤其适用于Web开发。它的语法类似于Perl和C，但更适"><meta name="keywords" content="PHP,编程,服务器,Web开发,数据库,存储,操作,语法,函数,面向对象">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./PHP.html">
+    PHP
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./编程.html">
+    编程
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./服务器.html">
+    服务器
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./Web开发.html">
+    Web开发
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./数据库.html">
+    数据库
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./存储.html">
+    存储
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./操作.html">
+    操作
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./语法.html">
+    语法
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./函数.html">
+    函数
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./面向对象.html">
+    面向对象
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>PHP</h1>
+                    PHP（Hypertext Preprocessor，超文本预处理器）是一种广泛使用的通用编程语言，尤其适用于Web开发。它的语法类似于Perl和C，但更适合Web开发。PHP可以嵌入到HTML中，并与MySQL数据库轻松集成，这使得它成为创建动态网站、在线应用程序和内容管理系统的首选语言。
+
+### PHP的基本语法
+
+PHP代码通常包含在`<php>`标签之间，并放在HTML代码的`<body>`标签之前。例如：
+
+```php
+<?php
+  // 在这里放置PHP代码
+?>
+```
+
+PHP代码可以执行各种任务，如变量赋值、条件语句、循环、函数等。例如：
+
+```php
+<?php
+  $greeting = "Hello, World!";
+  echo $greeting; // 输出 "Hello, World!"
+?>
+```
+
+### PHP的数据类型
+
+PHP支持多种数据类型，包括整型（integer）、浮点型（float，也称为double）、字符串（string）、布尔值（boolean）、数组（array）、对象（object）等。例如：
+
+```php
+<?php
+  $integer = 42;
+  $float = 3.14;
+  $string = "Hello, World!";
+  $boolean = true;
+  $array = array("apple", "banana", "orange");
+  $object = new MyClass();
+?>
+```
+
+### PHP的运算符
+
+PHP提供了各种运算符，包括算术运算符、比较运算符、逻辑运算符、位运算符等。例如：
+
+```php
+<?php
+  $result = 42 + 2; // 算术运算
+  $is_greater = 5 > 3; // 比较运算
+  $is_true = $is_greater || $result > 20; // 逻辑运算
+  $bitwise_and = 12 & 7; // 位运算
+?>
+```
+
+### PHP的控制结构
+
+PHP提供了多种控制结构，如if-else语句、while循环语句、do-while循环语句、for循环语句等。例如：
+
+```php
+<?php
+  if ($result > 20) {
+    echo "The result is greater than 20.";
+  } else {
+    echo "The result is not greater than 20.";
+  }
+
+  while ($i < 10) {
+    echo $i . ", ";
+    $i++;
+  }
+
+  for ($i = 0; $i < 10; $i++) {
+    echo $i . ", ";
+  }
+?>
+```
+
+### PHP的函数
+
+PHP支持定义和使用函数。函数是一段可重用的代码，可以在程序的其他地方调用。例如：
+
+```php
+<?php
+  function greet() {
+    return "Hello, World!";
+  }
+
+  echo greet(); // 输出 "Hello, World!"
+?>
+```
+
+以上只是PHP的简介，实际上PHP有更多的特性和功能。对于想要深入了解PHP的人来说，建议查阅PHP官方文档或相关教程。
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

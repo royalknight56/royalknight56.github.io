@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cookie</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N5MM3G559R"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-N5MM3G559R');
+    </script>
+
+    <meta name="description" content="Cookie（也称为HTTP Cookie或Web Cookie）是一种由网站发送到用户浏览器并保存在用户本地终端上的数据。它的目的是使网站能够记住用户的偏"><meta name="keywords" content="cookie,browsinghistory,webstorage,session,privacy,advertising,cross-siterequestforgery,CSRF,redirect,authentication,JavaScript,DOM">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./cookie.html">
+    cookie
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./browsinghistory.html">
+    browsinghistory
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./webstorage.html">
+    webstorage
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./session.html">
+    session
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./privacy.html">
+    privacy
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./advertising.html">
+    advertising
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./cross-siterequestforgery.html">
+    cross-siterequestforgery
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./CSRF.html">
+    CSRF
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./redirect.html">
+    redirect
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./authentication.html">
+    authentication
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./JavaScript.html">
+    JavaScript
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./DOM.html">
+    DOM
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>cookie</h1>
+                    Cookie（也称为HTTP Cookie或Web Cookie）是一种由网站发送到用户浏览器并保存在用户本地终端上的数据。它的目的是使网站能够记住用户的偏好、登录状态等信息。
+
+功能：
+
+1. **临时存储**：Cookie数据通常只在短期内存在，例如用户访问一个网站时的会话信息。
+2. **个性化体验**：通过存储用户在网站上的偏好设置，如字体大小、颜色主题等，可以实现网站的个性化。
+3. **跟踪用户行为**：Cookie可用于追踪用户在网站上的活动，以便分析用户行为、兴趣和需求。
+4. **身份验证**：用于登录过程的身份验证，通过保存用户的登录凭证，允许用户访问受保护的页面而不需要重复输入用户名和密码。
+5. **广告投放**：通过跟踪用户浏览历史和偏好，实现精准的广告投放。
+
+工作原理：
+
+1. **创建Cookie**：当用户首次访问一个网站时，服务器会生成一个包含唯一标识符的Cookie，并通过HTTP响应头("Set-Cookie")发送至用户的浏览器。
+2. **发送Cookie**：浏览器接收到Cookie后将其保存到本地设备。
+3. **发送请求**：当用户再次访问同一网站时，浏览器会自动将之前保存的Cookie通过HTTP请求头（"Cookie"）发送给服务器。
+4. **识别用户**：服务器端对这个带有唯一标识符的Cookie进行验证，以辨认用户身份。
+5. **发送数据**： 根据需要，服务器会根据从Cookie中获取到的用户信息提供相应的服务或内容。
+
+限制与隐私问题：
+
+1. **隐私**：由于Cookie会保存在用户本地，大量的Cookie数据可能导致用户隐私泄露。
+2. **安全性**：敏感信息（如密码）不应通过Cookie传输，因为它们可能会被恶意软件或网络攻击窃取。
+3. **管理**：用户可以通过浏览器设置拒绝接受某网站的Cookie， 或者完全禁用Cookie。
+4. **存储空间**：由于受到存储空间的限制，每个站点能存储的Cookie数量是有限的。
+5. **容量**：Cookie的数据容量有限，通常不超过4KB。
+
+总之，Cookie是一种重要的网络技术，用于实现网站与用户之间的交互和个性化体验，但同时也带来了一定的隐私和安全挑战。
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

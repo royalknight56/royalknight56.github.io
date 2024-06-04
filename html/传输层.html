@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>传输层</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N5MM3G559R"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-N5MM3G559R');
+    </script>
+
+    <meta name="description" content="传输层是计算机网络模型中的一个关键层次，它负责在网络中的不同设备之间提供可靠的数据传输服务。在OSI（开放系统互联）参考模型中，传输层位于第四层，而在TCP"><meta name="keywords" content="传输层,TCP,UDP,端口,协议,数据包,互联网,内容,应用程序">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./传输层.html">
+    传输层
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./TCP.html">
+    TCP
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./UDP.html">
+    UDP
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./端口.html">
+    端口
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./协议.html">
+    协议
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./数据包.html">
+    数据包
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./互联网.html">
+    互联网
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./内容.html">
+    内容
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./应用程序.html">
+    应用程序
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>传输层</h1>
+                    传输层是计算机网络模型中的一个关键层次，它负责在网络中的不同设备之间提供可靠的数据传输服务。在OSI（开放系统互联）参考模型中，传输层位于第四层，而在TCP/IP协议栈中，它是第三层。本篇文章将详细探讨传输层的概念、特性、功能以及相关协议。
+
+**一、传输层的定义与功能**
+
+传输层的主要作用是向用户提供可靠的端到端的差错和流量控制，确保数据的正确传输。它负责建立、维护和拆除应用程序之间的通信连接，使它们能够相互通信。此外，传输层还可以回收和管理网络资源，以防止网络拥塞。
+
+**二、传输层的特性**
+
+传输层具有以下三个主要特性：
+
+1. **可靠性**：传输层通过检查和处理传输过程中的错误，确保数据的完整性和准确性。它使用确认和重传机制来确保数据包的正确接收。
+
+2. **流量控制**：传输层可以根据接收方的缓冲区大小和网络拥塞情况，动态调整传输速率，防止数据溢出和网络拥塞。
+
+3. **拥塞控制**：传输层通过监测网络拥塞状况，并采取相应的措施来减少数据包的发送速度，避免网络拥塞。
+
+**三、传输层的主要协议**
+
+传输层使用多种协议来实现上述功能，其中最主要的包括：
+
+1. **TCP协议**：TCP是一种面向连接的、可靠的、基于字节流的传输层协议。它通过序列号、确认应答、重发控制、连接管理以及窗口控制等机制，确保数据的正确传输。TCP还提供了流量控制和拥塞控制功能。
+
+2. **UDP协议**：UDP是一种无连接的、不可靠的、基于数据报的传输层协议。它简化了数据传输过程，适用于对延迟敏感的应用如在线游戏、实时视频等。但UDP不保证数据的完整性和可靠性，因此可能会出现数据丢失或乱序的问题。
+
+**四、总结**
+
+传输层是计算机网络模型中的重要层次，负责在网络中的不同设备之间提供可靠的数据传输服务。它的工作原理是通过建立和维护应用程序之间的通信连接，实现数据的正确传输。传输层使用多种协议来实现其功能，其中TCP协议提供可靠的传输服务，而UDP协议则适用于对延迟敏感的应用。
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

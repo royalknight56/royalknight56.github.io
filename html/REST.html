@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REST</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N5MM3G559R"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-N5MM3G559R');
+    </script>
+
+    <meta name="description" content="REST（Representational State Transfer，表述性状态转移）是一种用于分布式系统中的软件架构风格。它主张使用简单的超文本传输协"><meta name="keywords" content="REST,API,URL,HTTP,WebSocket,RESTful,JSON,XML,query,request,response,data,resource,manipulation">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./REST.html">
+    REST
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./API.html">
+    API
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./URL.html">
+    URL
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./HTTP.html">
+    HTTP
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./WebSocket.html">
+    WebSocket
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./RESTful.html">
+    RESTful
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./JSON.html">
+    JSON
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./XML.html">
+    XML
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./query.html">
+    query
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./request.html">
+    request
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./response.html">
+    response
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./data.html">
+    data
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./resource.html">
+    resource
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./manipulation.html">
+    manipulation
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>REST</h1>
+                    REST（Representational State Transfer，表述性状态转移）是一种用于分布式系统中的软件架构风格。它主张使用简单的超文本传输协议（HTTP）进行通信，从而有效地处理资源。REST将web应用划分为各种独立、互不联系的资源，这些资源遵循一定的标准，通过使用不同的URL进行访问。
+
+REST的核心原则包括：
+
+**1. 无状态性（Statelessness）**：在RESTful API中，每个请求都包含了处理该请求所需的所有信息。服务器不会存储客户端的上下文信息，这意味着每次请求都需要携带足够的信息以便于服务器处理。这种无状态性的设计使得RESTful应用易于扩展和维护。
+
+**2. 客户端-服务器架构（Client-Server Architecture）**：REST将web应用划分为两部分：客户端和服务器。这两部分通过网络进行通信，服务器负责处理客户端发送的请求并返回结果。这种分离使得客户端和服务器可以独立地升级和改进，而不会影响到对方的功能。
+
+**3. 资源定位（Resource Location）**：REST鼓励使用标准的URL结构来定位和访问资源。通过解析URL，客户端可以清楚地知道请求的资源位于何处，以及应该如何去访问它。
+
+**4. 统一接口（Uniform Interface）**：REST要求API具有统一且简洁的接口，这包括使用标准的HTTP方法（如GET, POST, PUT, DELETE）来操作资源。同时，REST还提倡使用标准的数据格式（如JSON, XML）来交换数据。
+
+**5. 可缓存（Caching）**：RESTful API可以利用客户端或服务器端的缓存机制来提高响应性能。通过将常用数据缓存在本地，客户端可以减少对服务器的请求数量，从而降低网络延迟和提高用户体验。
+
+RESTful API在许多现代web应用和API中被广泛采用，尤其是一些大型、复杂的网络服务，如社交媒体平台、在线商店和博客系统等。通过遵循REST原则，开发者可以创建出易于使用、可扩展且高性能的web应用。
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

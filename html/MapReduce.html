@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MapReduce</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N5MM3G559R"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-N5MM3G559R');
+    </script>
+
+    <meta name="description" content="**MapReduce** 是一种编程模型，用于处理和生成大型数据集。这种模型是由 Google 的loor MapReduce 编程模型发展而来的，现在已"><meta name="keywords" content="MapReduce,大数据,分布式计算,并行处理,数据挖掘,云计算.">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./MapReduce.html">
+    MapReduce
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./大数据.html">
+    大数据
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./分布式计算.html">
+    分布式计算
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./并行处理.html">
+    并行处理
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./数据挖掘.html">
+    数据挖掘
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./云计算..html">
+    云计算.
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>MapReduce</h1>
+                    **MapReduce** 是一种编程模型，用于处理和生成大型数据集。这种模型是由 Google 的loor MapReduce 编程模型发展而来的，现在已经成为 Hadoop 生态系统的重要组成部分，同时也是云计算和分布式系统中的核心概念。
+
+MapReduce 的主要思想是从分布式存储系统中读取数据，然后对数据进行特定的运算和处理。它强调的是数据的分布式处理和并行计算，以便在大量计算机上实现复杂的数据处理任务。
+
+MapReduce 的工作流程主要包括两个阶段：Map（映射）和 Reduce（归约）。这两个阶段分别负责不同的数据处理任务。
+
+在 Map 阶段，数据被分割成多个片段，然后由不同的 Map 任务并行处理。Map 任务的主要作用是将输入数据转换成键值对（key-value pairs）的形式，并将结果写入到本地磁盘上。这些键值对会进一步被传送到 Reduce 阶段进行进一步的处理。
+
+在 Reduce 阶段，来自不同 Map 任务的键值对会根据键进行聚合。Reduce 任务会对每个键对应的一组值进行处理，通常是进行某种汇总操作，比如计算总和、平均值或者找到最大值等。最终的结果会被写入到分布式文件系统（如 HDFS）中，供后续程序使用。
+
+MapReduce 的优点包括：
+
+1. **可扩展性**：MapReduce 模型可以很容易地扩展到数以千计的计算节点，处理器性能也相对较好。
+2. **容错性**：MapReduce 可以自动处理节点故障。如果一个节点在执行任务时发生故障，MapReduce 可以自动将该节点的任务重新分配给其他节点。
+3. **并行性**：MapReduce 利用计算机群的并行计算能力，可以处理大量的数据。
+4. **低成本**：MapReduce 模型允许用户在大量廉价的计算资源上运行计算密集型应用，而不需要购买昂贵的硬件设备。
+
+然而，MapReduce 也存在一些局限性。例如，它不适合需要实时处理的应用，因为它的处理速度依赖于网络速度和计算节点的数量。此外，MapReduce 在处理非结构化数据时也面临挑战。
+
+尽管如此，MapReduce 仍然是处理大数据集时的一种强大工具，被广泛应用于各种场景，如日志处理、商业化搜索、机器学习和数据挖掘等。
+
+总的来说，MapReduce 是一种非常重要的分布式计算框架，它为我们提供了一种在大量计算资源上处理数据的方法。虽然它存在一些局限性，但通过不断的优化和改进，MapReduce 仍然能够发挥出巨大的潜力，为大数据领域的发展做出贡献。
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

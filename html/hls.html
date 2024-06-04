@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hls</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N5MM3G559R"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-N5MM3G559R');
+    </script>
+
+    <meta name="description" content="HLS，全称HTTP Live Streaming，是一种基于HTTP的流媒体传输协议。它可以在互联网上实时传输视频和音频内容，被广泛应用于IPTV（互联网"><meta name="keywords" content="hls,streaming,video,playback,buffer,cdn,live,url,encryption,adaptive,bitrate">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./hls.html">
+    hls
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./streaming.html">
+    streaming
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./video.html">
+    video
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./playback.html">
+    playback
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./buffer.html">
+    buffer
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./cdn.html">
+    cdn
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./live.html">
+    live
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./url.html">
+    url
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./encryption.html">
+    encryption
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./adaptive.html">
+    adaptive
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./bitrate.html">
+    bitrate
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>hls</h1>
+                    HLS，全称HTTP Live Streaming，是一种基于HTTP的流媒体传输协议。它可以在互联网上实时传输视频和音频内容，被广泛应用于IPTV（互联网电视）、网络直播、点播视频等领域。
+
+HLS的工作原理是将视频流分割成一系列小的基于HTTP的文件，然后将这些文件传输给客户端。客户端播放时，将从服务器下载这些小文件，并按顺序播放它们，从而实现视频的实时传输和流式播放。
+
+HLS的优点包括：
+
+1. **兼容性好**：由于HLS是基于HTTP的，因此它可以兼容任何支持HTTP的浏览器和设备，包括PC、手机、平板等。
+2. **传输效率较高**：相比于其他流媒体传输协议，如RTMP和MPEG-DASH等，HLS具有更低的延迟和更高的传输效率。
+3. **灵活性高**：HLS支持分片传输，可以根据网络状况和设备性能动态调整分片的大小和数量，从而实现更好的视频流的适配和流畅播放。
+
+然而，HLS也有一些缺点：
+
+1. **需要静态IP地址**：HLS需要对视频流进行分片，并缓存到服务器上，因此需要服务器具备静态IP地址。如果服务器没有静态IP地址，可能需要使用CDN（内容分发网络）来进行流量分发和加速。
+2. **播放质量受限于网络带宽**：由于HLS是基于HTTP的流媒体传输协议，因此播放质量会受到网络带宽的影响。如果网络带宽不足或不稳定，可能会导致视频播放卡顿、中断等问题。
+
+总之，HLS是一种实用的、高效的流媒体传输协议，可以被广泛应用于各种需要实时视频传输的场景中。然而，在使用时需要注意其优缺点，并根据具体需求进行适当的配置和优化。
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

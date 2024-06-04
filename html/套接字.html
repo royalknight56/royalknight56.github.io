@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>套接字</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N5MM3G559R"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-N5MM3G559R');
+    </script>
+
+    <meta name="description" content="套接字（socket）是一种在计算机网络中进行通信的端点，它允许不同计算机之间的进程进行数据交换。套接字是一种特殊的通信协议，它使用抽象的数据结构来描述通信"><meta name="keywords" content="套接字,TCP,UDP,网络,数据交换,端口,协议,应用程序,服务器,客户端,连接,传输,面向连接,无连接.">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./套接字.html">
+    套接字
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./TCP.html">
+    TCP
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./UDP.html">
+    UDP
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./网络.html">
+    网络
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./数据交换.html">
+    数据交换
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./端口.html">
+    端口
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./协议.html">
+    协议
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./应用程序.html">
+    应用程序
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./服务器.html">
+    服务器
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./客户端.html">
+    客户端
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./连接.html">
+    连接
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./传输.html">
+    传输
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./面向连接.html">
+    面向连接
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./无连接..html">
+    无连接.
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>套接字</h1>
+                    套接字（socket）是一种在计算机网络中进行通信的端点，它允许不同计算机之间的进程进行数据交换。套接字是一种特殊的通信协议，它使用抽象的数据结构来描述通信的端点，并提供了一种在同一计算机上不同进程之间，以及在跨越互联网的不同计算机之间进行通信的方法。
+
+套接字的主要组成部分包括：
+
+1. **IP地址**：这是网络中设备的唯一标识符，通常由十进制数字组成，例如192.168.1.1。
+2. **端口号**：这是一个介于0到65535之间的数字，用于区分不同的服务或应用程序。例如，HTTP服务通常运行在80端口上，SSH服务通常运行在22端口上。
+
+创建套接字时，需要指定一个唯一的IP地址和端口号。通常情况下，个人电脑上的程序会在本地IP地址（如127.0.0.1）和常用的端口号上创建套接字，以便与其他进程或计算机进行通信。
+
+套接字通信是双向的。在发送数据时，发送方将数据写入套接字；在接收数据时，接收方从套接字中读取数据。为了确保数据的完整性和可靠性，通信双方需要进行身份验证和数据校验。
+
+套接字编程是计算机网络编程的重要组成部分。它允许开发者设计和实现复杂的网络应用程序，如在线聊天室、文件传输服务器、远程访问客户端等。通过套接字编程，开发者可以更深入地理解网络通信的原理和实现方法。
+
+在实际应用中，套接字通信常用于以下几个方面：
+
+1. **Web服务器与浏览器之间的通信**：当你在浏览器中访问一个网站时，你的浏览器会与网站服务器建立一个套接字连接，然后发送HTTP请求。服务器接收到请求后，会处理并返回响应，你的浏览器接收到响应后，就会显示网页内容。
+2. **电子邮件客户端与邮件服务器之间的通信**：电子邮件客户端（如Outlook、Thunderbird等）会与邮件服务器建立套接字连接，然后发送邮件的邮体和附件。邮件服务器接收到邮件后，会存储邮件到服务器上，等待用户取回。
+3. **远程登录（SSH）客户端与服务器之间的通信**：当你通过SSH客户端登录到远程服务器时，你的客户端和服务器之间会建立一个加密的套接字连接。在这个连接上，你可以执行命令、传输文件等操作。
+
+总之，套接字是一种强大的通信端点，在计算机网络中扮演着至关重要的角色。通过掌握套接字的基本概念和编程方法，开发者可以更好地设计和实现各种网络应用程序，从而更深入地理解网络通信的原理和实现。
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

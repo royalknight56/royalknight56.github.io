@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YARN</title>
+    <meta name="theme-color" content="#f6f6f6">
+    <link rel="icon" href="https://vtron.site/vtron-icon-nobg.png">
+    <link rel="stylesheet" type="text/css" href="https://vtron.site/assests/blog.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N5MM3G559R"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-N5MM3G559R');
+    </script>
+
+    <meta name="description" content="YARN，全称Yet Another Resource Negotiator，是Hadoop中的一个核心组件。它是Hadoop分布式文件系统(HDFS)和M"><meta name="keywords" content="YARN,Hadoop,分布式存储,列式存储,大数据,数据处理,容器化,任务调度,资源管理,实时计算">
+</head>
+<style>
+    
+
+</style>
+
+<body>
+    <div class="webpage-container">
+        <div class="sidebar">
+            <div class="sidebar-caller">
+                ▶
+            </div>
+            <div class="sidebar-content">
+                <div class="tree-container">
+                    <label class="theme-toggle-container" for="theme_toggle">
+                        <input class="theme-toggle-input" type="checkbox" id="theme_toggle"
+                            onclick="handleThemeToggle()">
+                        <div class="toggle-background" id="togglefor"></div>
+                    </label>
+
+                    <div class="tree-header">
+                        Menu<a class="back-home" href="https://vtron.site/">返回主页</a>
+                    </div>
+                    <div class="tree-scroll-area">
+                        <a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./YARN.html">
+    YARN
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./Hadoop.html">
+    Hadoop
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./分布式存储.html">
+    分布式存储
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./列式存储.html">
+    列式存储
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./大数据.html">
+    大数据
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./数据处理.html">
+    数据处理
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./容器化.html">
+    容器化
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./任务调度.html">
+    任务调度
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./资源管理.html">
+    资源管理
+</a><a class="tree-item leaf level-1"
+      style="padding-left: 20px"
+      href="./实时计算.html">
+    实时计算
+</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="document-container">
+            <div class="markdown-rendered">
+                <div class="markdown-preview-section">
+                    <h1>YARN</h1>
+                    YARN，全称Yet Another Resource Negotiator，是Hadoop中的一个核心组件。它是Hadoop分布式文件系统(HDFS)和MapReduce编程模型之间的桥梁，允许应用程序以高效的方式在集群中动态申请和释放资源。
+
+YARN的主要目标是为应用程序提供一个集中的资源管理系统，该系统能够动态地分配和管理集群中的计算资源，从而实现更高效、更具可扩展性的分布式计算。
+
+YARN的核心组件包括：
+
+1. **资源管理器ResourceManager**：它是YARN中的主控节点，负责整个集群的资源管理和调度。它维护了一个资源池，用于存放各个应用程序的申请和释放的资源。ResourceManager还负责将应用程序的请求转发给合适的NodeManager，以协调集群中的计算资源。
+
+2. **节点管理器NodeManager**：每个节点上都有一个NodeManager，它负责管理该节点的资源，包括但不限于内存、CPU和磁盘等。NodeManager会定期向ResourceManager报告节点的资源使用情况，以便ResourceManager能够进行资源的动态分配。
+
+3. **应用程序管理器ApplicationMaster**：每个应用程序在YARN上运行时，都会创建一个ApplicationMaster。这个应用程序Master负责协调应用程序的多个任务，以及与ResourceManager和NodeManager进行通信，以申请和释放资源。应用程序Master还会与每个任务所在的NodeManager通信，监控任务的执行情况，并在必要时重新分配资源。
+
+YARN的工作流程通常如下：
+
+1. **应用程序提交**：应用程序首先提交给ResourceManager，ResourceManager会检查应用程序的资格，并为其分配唯一的应用ID。
+
+2. **资源申请**：一旦应用程序获得审批，ResourceManager会为它分配一定的资源。这些资源包括计算资源（如内存、CPU）和存储资源（如磁盘空间）。同时，ResourceManager会启动一个ApplicationMaster。
+
+3. **任务执行**：应用程序的各个任务会在不同的节点上运行，每个任务都会向附近的NodeManager发送请求，以获取所需的资源。NodeManager会监控资源的使用情况，并在必要时将资源分配给任务。
+
+4. **资源释放**：当任务完成或不再需要时，会向NodeManager发送资源释放的请求。NodeManager会更新资源的使用情况，并通知ResourceManager。ResourceManager则会将这些资源回收，并重新分配给其他应用程序。
+
+5. **应用程序退出**：当应用程序结束时，它会通知ResourceManager释放所有相关的资源。ResourceManager会停止ApplicationMaster，并回收为其分配的所有资源。
+
+总之，YARN通过集中式的资源管理，为Hadoop提供了良好的可扩展性和资源利用率，使得大型数据集的处理变得更为高效。
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
